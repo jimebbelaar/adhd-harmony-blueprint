@@ -1,0 +1,2081 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ADHD Harmony — The Complete Blueprint</title>
+<style>
+/* ═══════════════════════════════════════════════════════════════
+   ADHD HARMONY WEB BOOK
+   Dark premium reading experience
+   ═══════════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+    --bg-dark: #0e1118;
+    --bg-surface: #141822;
+    --bg-elevated: #1a1f2e;
+    --amber: #c9a06c;
+    --amber-light: #d4af7a;
+    --amber-dim: #8b7355;
+    --amber-glow: #b8956a;
+    --cream: #d8cdb8;
+    --cream-dim: #8a8070;
+    --toc-width: 300px;
+    --content-max: 720px;
+    --transition: 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ── Anti-copy ── */
+body {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: var(--amber-dim) var(--bg-dark);
+}
+
+body {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    background: var(--bg-dark);
+    color: var(--cream);
+    font-size: 17px;
+    line-height: 1.8;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-dark);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--amber-dim);
+    border-radius: 4px;
+}
+
+/* ── Layout ── */
+#toc {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--toc-width);
+    height: 100vh;
+    background: var(--bg-surface);
+    border-right: 1px solid rgba(139, 115, 85, 0.15);
+    overflow-y: auto;
+    z-index: 100;
+    transition: transform var(--transition);
+    scrollbar-width: thin;
+    scrollbar-color: var(--amber-dim) var(--bg-surface);
+}
+
+#toc::-webkit-scrollbar {
+    width: 4px;
+}
+#toc::-webkit-scrollbar-thumb {
+    background: rgba(139, 115, 85, 0.3);
+    border-radius: 2px;
+}
+
+.toc-header {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--amber);
+    padding: 24px 24px 16px;
+    border-bottom: 1px solid rgba(139, 115, 85, 0.1);
+}
+
+.toc-list {
+    list-style: none;
+    padding: 12px 0;
+}
+
+.toc-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.toc-h1 {
+    margin: 2px 0;
+}
+
+.toc-h1 > a {
+    display: block;
+    padding: 8px 24px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--cream-dim);
+    text-decoration: none;
+    transition: all var(--transition);
+    border-left: 2px solid transparent;
+}
+
+.toc-h1 > a:hover {
+    color: var(--amber);
+    background: rgba(201, 160, 108, 0.04);
+}
+
+.toc-h1 > a.active {
+    color: var(--amber);
+    border-left-color: var(--amber);
+    background: rgba(201, 160, 108, 0.06);
+}
+
+.toc-h2 a {
+    display: block;
+    padding: 5px 24px 5px 40px;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--cream-dim);
+    text-decoration: none;
+    opacity: 0.7;
+    transition: all var(--transition);
+}
+
+.toc-h2 a:hover {
+    opacity: 1;
+    color: var(--amber-light);
+}
+
+.toc-h2 a.active {
+    opacity: 1;
+    color: var(--amber);
+}
+
+/* ── Toggle button ── */
+#toc-toggle {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    z-index: 200;
+    background: var(--bg-elevated);
+    border: 1px solid rgba(139, 115, 85, 0.2);
+    color: var(--amber);
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    transition: all var(--transition);
+}
+
+#toc-toggle:hover {
+    background: var(--amber);
+    color: var(--bg-dark);
+}
+
+/* ── Main content ── */
+#book {
+    margin-left: var(--toc-width);
+    min-height: 100vh;
+}
+
+.cover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 40px;
+    position: relative;
+}
+
+.cover img {
+    max-width: 90%;
+    max-height: 85vh;
+    border-radius: 4px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* ── Content area ── */
+.content {
+    max-width: var(--content-max);
+    margin: 0 auto;
+    padding: 0 32px 120px;
+}
+
+/* ── Chapter / Section ── */
+.chapter {
+    padding-top: 80px;
+    margin-bottom: 40px;
+}
+
+.chapter h1 {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 2.2em;
+    font-weight: 400;
+    color: var(--amber);
+    line-height: 1.3;
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+}
+
+.ornament {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 20px 0 36px;
+    opacity: 0.4;
+}
+
+.ornament::before,
+.ornament::after {
+    content: '';
+    height: 1px;
+    width: 80px;
+    background: var(--amber-dim);
+}
+
+.ornament::before {
+    background: linear-gradient(to right, transparent, var(--amber-dim));
+}
+
+.ornament::after {
+    background: linear-gradient(to left, transparent, var(--amber-dim));
+}
+
+.section {
+    margin-top: 48px;
+}
+
+h2 {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 1.55em;
+    font-weight: 400;
+    color: var(--amber);
+    line-height: 1.35;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.05em;
+    font-weight: 600;
+    color: var(--amber-glow);
+    margin: 32px 0 12px;
+    letter-spacing: 0.01em;
+}
+
+p {
+    margin-bottom: 18px;
+    color: var(--cream);
+    font-size: 1em;
+    line-height: 1.85;
+}
+
+/* ── Blockquote ── */
+blockquote {
+    margin: 28px 0;
+    padding: 20px 28px;
+    border-left: 3px solid var(--amber-dim);
+    background: rgba(201, 160, 108, 0.03);
+    border-radius: 0 6px 6px 0;
+}
+
+blockquote p {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-style: italic;
+    font-size: 1.05em;
+    color: var(--amber-light);
+    margin-bottom: 8px;
+    line-height: 1.7;
+}
+
+blockquote cite {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-size: 0.8em;
+    font-weight: 600;
+    color: var(--amber-dim);
+}
+
+/* ── Template boxes ── */
+.template {
+    margin: 24px 0;
+    padding: 20px 24px;
+    background: var(--bg-surface);
+    border: 1px solid rgba(139, 115, 85, 0.15);
+    border-radius: 6px;
+}
+
+.template p {
+    font-style: italic;
+    color: var(--cream-dim);
+    font-size: 0.95em;
+    margin-bottom: 0;
+}
+
+/* ── Community Action blocks ── */
+.community-action {
+    margin: 36px 0;
+    border-top: 1px solid rgba(201, 160, 108, 0.25);
+    padding-top: 24px;
+}
+
+.community-action-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--amber);
+    margin-bottom: 18px;
+}
+
+.community-action-label::before {
+    content: '';
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    background: var(--amber);
+    transform: rotate(45deg);
+    flex-shrink: 0;
+}
+
+.community-template-box {
+    position: relative;
+    margin: 20px 0;
+    padding: 20px 24px 56px;
+    background: var(--bg-surface);
+    border: 1px solid rgba(201, 160, 108, 0.2);
+    border-radius: 8px;
+    font-style: italic;
+    color: var(--cream-dim);
+    font-size: 0.93em;
+    line-height: 1.9;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
+.community-template-box .bracket {
+    color: var(--amber-dim);
+    font-style: normal;
+}
+
+.copy-post-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    border-top: 1px solid rgba(201, 160, 108, 0.12);
+    border-radius: 0 0 8px 8px;
+    overflow: hidden;
+}
+
+.copy-post-bar button,
+.copy-post-bar a {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px 16px;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.btn-copy {
+    background: var(--bg-elevated);
+    color: var(--cream-dim);
+}
+
+.btn-copy:hover {
+    background: rgba(201, 160, 108, 0.1);
+    color: var(--cream);
+}
+
+.btn-copy.copied {
+    color: #6dcf8c;
+}
+
+.btn-post {
+    background: linear-gradient(180deg, #e0be82 0%, #c9a06c 50%, #a07840 100%);
+    color: var(--bg-dark);
+    font-weight: 700;
+    box-shadow: 0 1px 0 rgba(255, 240, 210, 0.4) inset;
+}
+
+.btn-post:hover {
+    background: linear-gradient(180deg, #eed09a 0%, #d4af7a 50%, #b8956a 100%);
+    box-shadow:
+        0 1px 0 rgba(255, 245, 220, 0.5) inset,
+        0 2px 12px rgba(201, 160, 108, 0.3);
+}
+
+/* ── Images ── */
+.section-image {
+    margin: 48px 0;
+    text-align: center;
+    /* Break out of content column to nearly full width */
+    width: calc(100vw - var(--toc-width) - 80px);
+    max-width: 1200px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.section-image img {
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5);
+}
+
+/* ── Reading progress bar ── */
+#progress {
+    position: fixed;
+    top: 0;
+    left: var(--toc-width);
+    right: 0;
+    height: 3px;
+    background: transparent;
+    z-index: 50;
+}
+
+#progress-bar {
+    height: 100%;
+    background: linear-gradient(to right, var(--amber-dim), var(--amber));
+    width: 0%;
+    transition: width 0.15s ease-out;
+}
+
+/* ── CTA Button (bottom-right) ── */
+#cta-float {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 150;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+    padding: 10px 14px 10px 18px;
+    border-radius: 10px;
+    background: rgba(20, 24, 34, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(201, 160, 108, 0.15);
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(8px);
+    pointer-events: none;
+}
+
+#cta-float.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+#cta-float:hover {
+    background: rgba(20, 24, 34, 0.95);
+    border-color: rgba(201, 160, 108, 0.35);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(201, 160, 108, 0.15);
+}
+
+#cta-float .cta-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: var(--cream-dim);
+    line-height: 1.3;
+    white-space: nowrap;
+}
+
+#cta-float .cta-text strong {
+    color: var(--cream);
+    font-weight: 600;
+}
+
+#cta-float .cta-btn {
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--bg-dark);
+    padding: 7px 14px;
+    border-radius: 6px;
+    white-space: nowrap;
+    background: linear-gradient(180deg, #e8c88a 0%, #c9a06c 40%, #a07840 100%);
+    box-shadow:
+        0 1px 0 rgba(255, 240, 210, 0.5) inset,
+        0 -1px 0 rgba(100, 70, 30, 0.3) inset,
+        0 2px 8px rgba(160, 120, 64, 0.3),
+        0 0 16px rgba(201, 160, 108, 0.15);
+    transition: all 0.25s ease;
+    letter-spacing: 0.3px;
+}
+
+#cta-float:hover .cta-btn {
+    background: linear-gradient(180deg, #f0d8a0 0%, #d4af7a 40%, #b8956a 100%);
+    box-shadow:
+        0 1px 0 rgba(255, 245, 220, 0.6) inset,
+        0 -1px 0 rgba(100, 70, 30, 0.2) inset,
+        0 4px 16px rgba(201, 160, 108, 0.4),
+        0 0 24px rgba(201, 160, 108, 0.2);
+    transform: scale(1.03);
+}
+
+@media (max-width: 768px) {
+    #cta-float {
+        bottom: 16px;
+        right: 16px;
+        left: 16px;
+        justify-content: center;
+    }
+}
+
+/* ── Resume reading banner ── */
+#resume-banner {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(calc(-50% + var(--toc-width) / 2));
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    background: var(--bg-elevated);
+    color: var(--cream);
+    padding: 12px 24px;
+    border-radius: 10px;
+    border: 1px solid rgba(201, 160, 108, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    z-index: 200;
+    display: none;
+    gap: 16px;
+    align-items: center;
+    cursor: pointer;
+    transition: all var(--transition);
+}
+
+#resume-banner:hover {
+    border-color: var(--amber);
+    background: rgba(201, 160, 108, 0.08);
+}
+
+#resume-banner .resume-text {
+    color: var(--amber);
+    font-weight: 500;
+}
+
+#resume-banner .dismiss {
+    color: var(--cream-dim);
+    font-size: 11px;
+    margin-left: 8px;
+    opacity: 0.6;
+}
+
+/* ── Footer ── */
+.book-footer {
+    text-align: center;
+    padding: 60px 32px 40px;
+    border-top: 1px solid rgba(139, 115, 85, 0.1);
+    margin-top: 60px;
+}
+
+.book-footer p {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: var(--cream-dim);
+}
+
+.book-footer a {
+    color: var(--amber);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 6px 16px;
+    border: 1px solid var(--amber);
+    border-radius: 4px;
+    margin-left: 8px;
+    transition: all var(--transition);
+}
+
+.book-footer a:hover {
+    background: var(--amber);
+    color: var(--bg-dark);
+}
+
+/* ── Highlight for future audio sync ── */
+/* ── Feature flags ── */
+:root {
+    --audio-enabled: 0; /* Set to 1 to re-enable audio players */
+}
+
+/* ── Audio player (hidden by feature flag) ── */
+.audio-player {
+    display: none !important;
+}
+.audio-player--enabled {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    margin: -8px 0 28px;
+    background: var(--bg-elevated);
+    border: 1px solid rgba(139, 115, 85, 0.15);
+    border-radius: 10px;
+    max-width: 480px;
+}
+
+.audio-player.playing {
+    border-color: rgba(201, 160, 108, 0.3);
+}
+
+.audio-btn {
+    background: none;
+    border: none;
+    color: var(--amber);
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition);
+    flex-shrink: 0;
+}
+
+.audio-btn:hover {
+    color: var(--amber-light);
+    transform: scale(1.1);
+}
+
+.play-btn {
+    width: 36px;
+    height: 36px;
+    background: rgba(201, 160, 108, 0.1);
+    border-radius: 50%;
+}
+
+.play-btn:hover {
+    background: rgba(201, 160, 108, 0.2);
+}
+
+.audio-player .icon-pause {
+    display: none;
+}
+
+.audio-player.playing .icon-play {
+    display: none;
+}
+
+.audio-player.playing .icon-pause {
+    display: block;
+}
+
+.audio-progress-wrap {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.audio-progress-bar {
+    height: 4px;
+    background: rgba(139, 115, 85, 0.2);
+    border-radius: 2px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.audio-progress-bar:hover {
+    height: 6px;
+}
+
+.audio-progress-fill {
+    height: 100%;
+    background: var(--amber);
+    border-radius: 2px;
+    width: 0%;
+    transition: width 0.1s linear;
+}
+
+.audio-time {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    color: var(--cream-dim);
+    white-space: nowrap;
+}
+
+.speed-btn {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    min-width: 28px;
+    color: var(--cream-dim);
+}
+
+.speed-btn:hover {
+    color: var(--amber);
+}
+
+/* ── Audio highlight ── */
+[data-cp] {
+    transition: background 0.4s ease, box-shadow 0.4s ease;
+    border-radius: 4px;
+    padding-left: 12px;
+    margin-left: -12px;
+    padding-right: 12px;
+    margin-right: -12px;
+}
+
+[data-cp].audio-active {
+    background: rgba(201, 160, 108, 0.07);
+    box-shadow: -3px 0 0 var(--amber-dim);
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+    #toc {
+        transform: translateX(-100%);
+    }
+    #toc.open {
+        transform: translateX(0);
+        box-shadow: 4px 0 24px rgba(0, 0, 0, 0.5);
+    }
+    #toc-toggle {
+        display: flex;
+    }
+    #book {
+        margin-left: 0;
+    }
+    #progress {
+        left: 0;
+    }
+    #resume-banner {
+        transform: translateX(-50%);
+    }
+    .section-image {
+        width: calc(100vw - 40px);
+    }
+    .content {
+        padding: 0 20px 80px;
+    }
+    .chapter h1 {
+        font-size: 1.8em;
+    }
+}
+
+/* ── Print prevention ── */
+@media print {
+    body {
+        display: none !important;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- Toggle TOC (mobile) -->
+<button id="toc-toggle" aria-label="Toggle table of contents">☰</button>
+
+<!-- Progress bar -->
+<div id="progress"><div id="progress-bar"></div></div>
+
+<!-- Table of Contents -->
+<nav id="toc" role="navigation" aria-label="Table of Contents">
+<div class="toc-header">Contents</div>
+<ul class="toc-list">
+<li class="toc-h1"><a href="#before-you-begin">Before You Begin</a>
+<ul>
+<li class="toc-h2"><a href="#what-this-operating-system-contains-1">What This Operating System Contains</a></li>
+<li class="toc-h2"><a href="#how-to-use-this-blueprint-2">How to Use This Blueprint</a></li>
+<li class="toc-h2"><a href="#two-ways-to-experience-this-blueprint-3">Two Ways to Experience This Blueprint</a></li>
+<li class="toc-h2"><a href="#the-real-promise-4">The Real Promise</a></li>
+</ul>
+</li>
+<li class="toc-h1"><a href="#a-note-from-jim-my-story">A Note From Jim: My Story</a>
+<ul>
+<li class="toc-h2"><a href="#the-cito-trauma-5">The CITO Trauma</a></li>
+<li class="toc-h2"><a href="#the-moment-everything-clicked-6">The Moment Everything Clicked</a></li>
+<li class="toc-h2"><a href="#success-sabotage-and-burnout-7">Success, Sabotage, and Burnout</a></li>
+<li class="toc-h2"><a href="#the-diagnosis-8">The Diagnosis</a></li>
+<li class="toc-h2"><a href="#the-healing-9">The Healing</a></li>
+<li class="toc-h2"><a href="#building-with-my-brain-10">Building With My Brain</a></li>
+</ul>
+</li>
+<li class="toc-h1"><a href="#the-operating-manual-you-never-received">The Operating Manual You Never Received</a>
+<ul>
+<li class="toc-h2"><a href="#the-adhd-brain-a-ferrari-with-bicycle-brakes-11">The ADHD Brain: A Ferrari with Bicycle Brakes</a></li>
+<li class="toc-h2"><a href="#the-dopamine-difference-12">The Dopamine Difference</a></li>
+<li class="toc-h2"><a href="#the-pleasure-pain-balance-13">The Pleasure-Pain Balance</a></li>
+<li class="toc-h2"><a href="#the-developmental-view-14">The Developmental View</a></li>
+<li class="toc-h2"><a href="#the-power-of-connection-15">The Power of Connection</a></li>
+<li class="toc-h2"><a href="#the-middle-way-16">The Middle Way</a></li>
+</ul>
+</li>
+<li class="toc-h1"><a href="#the-6-principles-of-adhd-harmony">The 6 Principles of ADHD Harmony</a>
+<ul>
+<li class="toc-h2"><a href="#principle-1-inside-out-transformation-17">Principle 1: Inside-Out Transformation.</a></li>
+<li class="toc-h2"><a href="#principle-2-thoughts-become-things-18">Principle 2: Thoughts Become Things.</a></li>
+<li class="toc-h2"><a href="#principle-3-the-mirror-principle-19">Principle 3: The Mirror Principle.</a></li>
+<li class="toc-h2"><a href="#principle-4-clarity-over-complexity-20">Principle 4: Clarity Over Complexity.</a></li>
+<li class="toc-h2"><a href="#principle-5-consistency-over-perfection-21">Principle 5: Consistency Over Perfection</a></li>
+<li class="toc-h2"><a href="#principle-6-evidence-over-belief-22">Principle 6: Evidence Over Belief</a></li>
+</ul>
+</li>
+<li class="toc-h1"><a href="#the-6-week-roadmap">The 6-Week Roadmap</a>
+</li>
+<li class="toc-h1"><a href="#week-1-baseline-and-north-star">Week 1: Baseline and North Star</a>
+<ul>
+<li class="toc-h2"><a href="#the-adhd-clarity-problem-23">The ADHD Clarity Problem</a></li>
+<li class="toc-h2"><a href="#the-two-acts-of-clarity-24">The Two Acts of Clarity</a></li>
+<li class="toc-h2"><a href="#picking-your-big-rocks-25">Picking Your Big Rocks</a></li>
+<li class="toc-h2"><a href="#the-anti-goals-framework-26">The Anti-Goals Framework</a></li>
+<li class="toc-h2"><a href="#your-commitment-letter-27">Your Commitment Letter</a></li>
+</ul>
+</li>
+<li class="toc-h1"><a href="#week-2-biological-regulation">Week 2: Biological Regulation</a>
+<ul>
+<li class="toc-h2"><a href="#find-your-first-domino-28">Find Your First Domino</a></li>
+<li class="toc-h2"><a href="#the-executive-function-trap-29">The Executive Function Trap</a></li>
+<li class="toc-h2"><a href="#sleep-the-foundation-30">Sleep: The Foundation</a></li>
+<li class="toc-h2"><a href="#movement-medicine-31">Movement Medicine</a></li>
+<li class="toc-h2"><a href="#nutrition-the-fuel-32">Nutrition: The Fuel</a></li>
+<li class="toc-h2"><a href="#tools-and-systems-33">Tools and Systems</a></li>
+</ul>
+</li>
+<li class="toc-h1"><a href="#week-3-emotional-mastery">Week 3: Emotional Mastery</a>
+<ul>
+<li class="toc-h2"><a href="#the-adhd-emotional-brain-34">The ADHD Emotional Brain</a></li>
+<li class="toc-h2"><a href="#thoughts-become-things-35">Thoughts Become Things</a></li>
+<li class="toc-h2"><a href="#you-are-not-the-voice-in-your-head-36">You Are Not the Voice in Your Head</a></li>
+<li class="toc-h2"><a href="#the-only-moment-that-exists-37">The Only Moment That Exists</a></li>
+<li class="toc-h2"><a href="#the-circle-of-control-38">The Circle of Control</a></li>
+<li class="toc-h2"><a href="#the-expectation-effect-39">The Expectation Effect</a></li>
+<li class="toc-h2"><a href="#the-gratitude-gateway-40">The Gratitude Gateway</a></li>
+<li class="toc-h2"><a href="#the-three-minute-comeback-protocol-41">The Three-Minute Comeback Protocol</a></li>
+<li class="toc-h2"><a href="#overcoming-procrastination-s-emotional-blocks-42">Overcoming Procrastination&#x27;s Emotional Blocks</a></li>
+<li class="toc-h2"><a href="#mental-rehearsal-training-the-future-43">Mental Rehearsal: Training the Future</a></li>
+<li class="toc-h2"><a href="#self-regulation-the-master-skill-44">Self-Regulation: The Master Skill</a></li>
+</ul>
+</li>
+<li class="toc-h1"><a href="#week-4-identity-transformation">Week 4: Identity Transformation</a>
+<ul>
+<li class="toc-h2"><a href="#inside-out-transformation-45">Inside-Out Transformation</a></li>
+<li class="toc-h2"><a href="#the-three-barriers-to-change-46">The Three Barriers to Change</a></li>
+<li class="toc-h2"><a href="#the-self-image-revolution-47">The Self-Image Revolution</a></li>
+<li class="toc-h2"><a href="#the-survival-identity-map-48">The Survival Identity Map</a></li>
+<li class="toc-h2"><a href="#the-self-sabotage-pattern-49">The Self-Sabotage Pattern</a></li>
+<li class="toc-h2"><a href="#the-stories-we-carry-50">The Stories We Carry</a></li>
+<li class="toc-h2"><a href="#the-mirror-principle-51">The Mirror Principle</a></li>
+<li class="toc-h2"><a href="#finding-your-right-difficult-52">Finding Your Right Difficult</a></li>
+<li class="toc-h2"><a href="#your-life-s-task-53">Your Life&#x27;s Task</a></li>
+<li class="toc-h2"><a href="#remembering-who-you-are-54">Remembering Who You Are</a></li>
+<li class="toc-h2"><a href="#two-lenses-for-self-understanding-55">Two Lenses for Self-Understanding</a></li>
+<li class="toc-h2"><a href="#identity-based-change-56">Identity-Based Change</a></li>
+<li class="toc-h2"><a href="#designing-your-future-self-57">Designing Your Future Self</a></li>
+<li class="toc-h2"><a href="#somatic-breathwork-ceremony-58">Somatic Breathwork Ceremony</a></li>
+</ul>
+</li>
+<li class="toc-h1"><a href="#week-5-productivity-and-environment">Week 5: Productivity and Environment</a>
+<ul>
+<li class="toc-h2"><a href="#the-harmony-productivity-system-59">The Harmony Productivity System</a></li>
+<li class="toc-h2"><a href="#the-perfect-week-60">The Perfect Week</a></li>
+<li class="toc-h2"><a href="#environment-as-architecture-61">Environment as Architecture</a></li>
+</ul>
+</li>
+<li class="toc-h1"><a href="#week-6-integration-and-the-long-game">Week 6: Integration and The Long Game</a>
+<ul>
+<li class="toc-h2"><a href="#consistency-over-perfection-62">Consistency Over Perfection</a></li>
+<li class="toc-h2"><a href="#evidence-over-belief-63">Evidence Over Belief</a></li>
+<li class="toc-h2"><a href="#the-plateau-of-latent-potential-64">The Plateau of Latent Potential</a></li>
+<li class="toc-h2"><a href="#domino-thinking-65">Domino Thinking</a></li>
+<li class="toc-h2"><a href="#playing-long-term-games-66">Playing Long-Term Games</a></li>
+<li class="toc-h2"><a href="#the-decision-filter-67">The Decision Filter</a></li>
+<li class="toc-h2"><a href="#the-comeback-protocol-68">The Comeback Protocol</a></li>
+<li class="toc-h2"><a href="#the-long-view-69">The Long View</a></li>
+</ul>
+</li>
+<li class="toc-h1"><a href="#your-journey-forward">Your Journey Forward</a>
+<ul>
+<li class="toc-h2"><a href="#the-real-goal-70">The Real Goal</a></li>
+<li class="toc-h2"><a href="#the-final-word-71">The Final Word</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+
+
+<!-- Main book content -->
+<main id="book">
+    <div class="cover" id="cover">
+        <img src="images/cover.png" alt="ADHD Harmony — The Complete Blueprint">
+    </div>
+
+    <div class="content">
+<section class="chapter" id="before-you-begin">
+<h1 data-para="10">Before You Begin</h1>
+<div class="ornament"></div>
+<div class="audio-player" data-src="audio/before_you_begin.mp3"><button class="audio-btn play-btn" aria-label="Play narration"><svg class="icon-play" viewBox="0 0 24 24" width="18" height="18"><polygon points="5,3 19,12 5,21" fill="currentColor"/></svg><svg class="icon-pause" viewBox="0 0 24 24" width="18" height="18"><rect x="5" y="3" width="4" height="18" fill="currentColor"/><rect x="15" y="3" width="4" height="18" fill="currentColor"/></svg></button><div class="audio-progress-wrap"><div class="audio-progress-bar"><div class="audio-progress-fill"></div></div><span class="audio-time">0:00 / 0:00</span></div><button class="audio-btn speed-btn" aria-label="Playback speed">1×</button></div>
+<p data-para="11" data-cs="before-you-begin" data-cp="0">I know what you are thinking. Another self-help document. Another framework. Another thing that promises transformation but ends up collecting dust, digital or otherwise.</p>
+<p data-para="12" data-cs="before-you-begin" data-cp="1">I get it. I have ADHD too. I have abandoned more books, courses, and systems than I can count. The last thing I wanted to create was something that does not get finished.</p>
+<p data-para="13" data-cs="before-you-begin" data-cp="2">So let me be direct with you.</p>
+<p data-para="14" data-cs="before-you-begin" data-cp="3">This is not another course. It is an operating system with direct implementation built in. It is not something you listen to and hope works. It is something you install and run.</p>
+<div class="section" id="what-this-operating-system-contains-1">
+<h2 data-para="15" data-cs="before-you-begin" data-cp="4">What This Operating System Contains</h2>
+<p data-para="16" data-cs="before-you-begin" data-cp="5">Everything in this program is built for implementation, not inspiration. I have done the reading so you do not have to wade through thousands of pages. Everything I have learned from Dr. Andrew Huberman, Dr. Joe Dispenza, Dr. Anna Lembke, Dr. Gabor Maté, and dozens of other researchers has been compressed, synthesized, and distilled into the most compact, actionable form I could create. I have done the experimenting so you do not waste years on approaches that do not work for ADHD brains. I have made the mistakes so you can skip straight to what actually moves the needle.</p>
+<p data-para="17" data-cs="before-you-begin" data-cp="6">Science. Ancient wisdom. And some things that honestly cannot be put into words but had to be lived to be understood.</p>
+<p data-para="18" data-cs="before-you-begin" data-cp="7">This is the operating manual I wish someone had handed me at twenty-four when I got my diagnosis. It would have saved me years of struggle, thousands of euros on courses that missed the point, and more pain than I care to remember.</p>
+<p data-para="19" data-cs="before-you-begin" data-cp="8">You have it now.</p>
+<figure class="section-image"><img src="images/before_you_begin_sections/byb_section_1_what_this_operating_system_contains.png" alt="What This Operating System Contains" loading="lazy"></figure>
+<div class="section" id="how-to-use-this-blueprint-2">
+<h2 data-para="20" data-cs="before-you-begin" data-cp="9">How to Use This Blueprint</h2>
+<p data-para="21" data-cs="before-you-begin" data-cp="10">Come with an open mind and an open heart. You will encounter neuroscience, psychology, and some concepts that might feel unfamiliar. Some will click immediately. Others might take time. If you feel resistance, that is usually a signal you are approaching growth.</p>
+<p data-para="22" data-cs="before-you-begin" data-cp="11">Protect your attention. Turn off notifications. Put your phone in another room. Use an app blocker. One distraction, one scroll through TikTok, can derail your entire session. The world&#x27;s most talented engineers designed those apps to capture your attention. Fighting them with willpower alone is a losing battle.</p>
+<p data-para="23" data-cs="before-you-begin" data-cp="12">Do the exercises. Information without implementation is just sophisticated procrastination. I have kept everything ADHD-friendly: short, quick, nothing overwhelming. But you still have to do the work. Reading this and nodding along changes nothing. Implementing it changes everything.</p>
+<p data-para="24" data-cs="before-you-begin" data-cp="13">Support your biology. Your brain runs on sleep, movement, and nutrition. During this program, try to sleep eight hours. Skip the processed foods and sugar. Get some movement, even just ten to twenty minutes of walking. Drink water. When you optimize your system, you get the most out of this transformation.</p>
+<p data-para="25" data-cs="before-you-begin" data-cp="14">Use the community. The people who succeed are the ones who actively engage. I know you might feel resistance to posting, to introducing yourself, to asking questions. That resistance is exactly why you need to do it. Share your wins, even the tiny ones. Ask for advice. Show up. Before you start Week 1, introduce yourself in the community. Share one sentence about why you are here. This is your first act of showing up.</p>
+<p data-para="26" data-cs="before-you-begin" data-cp="15">Never miss two days. Missing one day is fine. Life happens. Missing two days is the start of a new bad habit. That is where people disappear. The skill we are training is not perfection. It is coming back.</p>
+<figure class="section-image"><img src="images/before_you_begin_sections/byb_section_2_how_to_use_this_blueprint.png" alt="How to Use This Blueprint" loading="lazy"></figure>
+<div class="section" id="two-ways-to-experience-this-blueprint-3">
+<h2 data-para="27" data-cs="before-you-begin" data-cp="16">Two Ways to Experience This Blueprint</h2>
+<p data-para="28" data-cs="before-you-begin" data-cp="17">Path 1: Self-Guided. Use this blueprint alongside the free ADHD Harmony community. Follow the program at your own pace, post your progress, and engage with others on the same journey. Everything you need to transform is in your hands right now.</p>
+<p data-para="29" data-cs="before-you-begin" data-cp="18">Path 2: Fully Guided. Join the live ADHD Harmony program for weekly coaching sessions with Jim, hot seat coaching where your specific situation gets addressed, Q&amp;A calls, and body-doubling sessions. You also get Harmony AI, your personal coach that learns your patterns, adapts your exercises, tracks your progress, and catches you when you slip. Like having a coach in your pocket 24/7.</p>
+<p data-para="30" data-cs="before-you-begin" data-cp="19">The blueprint is the map. The program is the guide walking beside you, making sure you never get lost. Message Jim Ebbelaar directly in Skool for more information. The link is below on every page.</p>
+<figure class="section-image"><img src="images/before_you_begin_sections/byb_section_3_two_ways_to_experience_this_blueprint.png" alt="Two Ways to Experience This Blueprint" loading="lazy"></figure>
+<div class="section" id="the-real-promise-4">
+<h2 data-para="31" data-cs="before-you-begin" data-cp="20">The Real Promise</h2>
+<p data-para="32" data-cs="before-you-begin" data-cp="21">I cannot promise you transformation, because in the end, you have to do the work. But what I can promise is this: I did my absolute best to synthesize everything I have personally learned and used to get to where I am today. Everything that helped me go from scattered, burnt out, and self-destructive to running an award-winning agency while actually living a healthy life.</p>
+<p data-para="33" data-cs="before-you-begin" data-cp="22">The goal is not to fix you. You are not broken. You are about to discover why. Give me six weeks. I will give you a new operating system.</p>
+<p data-para="34" data-cs="before-you-begin" data-cp="23">Let us begin.</p>
+<figure class="section-image"><img src="images/before_you_begin_sections/byb_section_4_the_real_promise.png" alt="The Real Promise" loading="lazy"></figure>
+<section class="chapter" id="a-note-from-jim-my-story">
+<h1 data-para="35">A Note From Jim: My Story</h1>
+<div class="ornament"></div>
+<p data-para="36" data-cs="a-note-from-jim-my-story" data-cp="0">I want to share why this program exists and why I believe so deeply in its principles.</p>
+<p data-para="37" data-cs="a-note-from-jim-my-story" data-cp="1">I was not diagnosed with ADHD until I was twenty-four years old. For most of my life, I had no idea why I was the way I was. I just knew I was different.</p>
+<p data-para="38" data-cs="a-note-from-jim-my-story" data-cp="2">As a kid, I was always bored in school. I was not the hyperactive type. I was the dreamy type. Sitting still, following rules that made no sense to me, reading comprehension exercises about nothing that mattered. I could not do it. I remember refusing to learn to read an analog clock because I could read digital clocks perfectly well. Why waste time on something obsolete? I remember spelling the Dutch word for scissors, schaar, as &quot;sgaar&quot; because that is how it is actually pronounced. The rules felt arbitrary and pointless. I questioned anything that did not make sense to me.</p>
+<blockquote data-para="39" data-cs="a-note-from-jim-my-story" data-cp="3"><p>I was not a troublemaker. I was just somewhere else, lost in my own head, dreaming about worlds that were more interesting than the classroom.</p><cite>— Jim Ebbelaar</cite></blockquote>
+<p data-para="40" data-cs="a-note-from-jim-my-story" data-cp="4">What I could do was play video games. Not just play, but optimize. In Pokémon, I figured out how to exploit the game mechanics to get all three starter Pokémon, something that required understanding systems at a level most players never bothered with. In RuneScape, I built pure characters, accounts optimized for player-versus-player combat by exploiting the stat system in ways the developers never intended. I was not interested in following the storyline. I was interested in finding the edges of the system and pushing past them.</p>
+<p data-para="41" data-cs="a-note-from-jim-my-story" data-cp="5">This pattern of optimization, out-of-the-box thinking, and finding unconventional paths would define my entire life. But first, it would nearly destroy me.</p>
+<div class="section" id="the-cito-trauma-5">
+<h2 data-para="42" data-cs="a-note-from-jim-my-story" data-cp="6">The CITO Trauma</h2>
+<p data-para="43" data-cs="a-note-from-jim-my-story" data-cp="7">In the Netherlands, we have a test called the CITO that determines which level of secondary school you can attend. My brother scored high. I scored VMBO, nearly the lowest track, because my reading comprehension was abysmal. It was not that I could not understand things. I could talk, reason, create, and strategize better than most kids my age. But I could not read a paragraph and answer questions about it. My mind was elsewhere.</p>
+<blockquote data-para="44" data-cs="a-note-from-jim-my-story" data-cp="8"><p>That test result became a core wound. I felt stupid, even though somewhere deep down I knew I was not. That contradiction, knowing I had capacity but being labeled as less-than, shaped everything that followed.</p><cite>— Jim Ebbelaar</cite></blockquote>
+<p data-para="45" data-cs="a-note-from-jim-my-story" data-cp="9">I ended up at a school where I barely had to try. So I did not. I became the class clown, hiding my insecurity behind humor. I hung out with the wrong crowd, smoked joints, and coasted through with minimal effort. If I did not try, I could not fail. If I played the clown, no one would see the scared kid underneath.</p>
+<figure class="section-image"><img src="images/jims_story_sections/js_section_1_the_cito_trauma.png" alt="The CITO Trauma" loading="lazy"></figure>
+<div class="section" id="the-moment-everything-clicked-6">
+<h2 data-para="46" data-cs="a-note-from-jim-my-story" data-cp="10">The Moment Everything Clicked</h2>
+<p data-para="47" data-cs="a-note-from-jim-my-story" data-cp="11">Everything changed when I discovered communities. Online gaming groups gave me a sense of belonging for the first time. Through those communities, I discovered graphic design. At fifteen, I was making YouTube banners and logos for gaming clans and earning my first real money online.</p>
+<p data-para="48" data-cs="a-note-from-jim-my-story" data-cp="12">After a false start in creative media and then switching to software development, I spent two years watching Breaking Bad and Game of Thrones in class, doing absolutely nothing productive. Then came a school assignment: my team had to build an ordering system for the Turkish pizza place where I worked as a delivery driver. We built it from scratch. The day it went live, orders started coming through immediately. Something I had built. Something that worked. Something that made an impact in the real world.</p>
+<blockquote data-para="49" data-cs="a-note-from-jim-my-story" data-cp="13"><p>I remember walking through school that day with a cigarette in my hand, so lost in the system in my head that I forgot where I was. For the first time, I had found something where I could pour all my energy and actually create impact. That was the moment the switch flipped.</p><cite>— Jim Ebbelaar</cite></blockquote>
+<p data-para="50" data-cs="a-note-from-jim-my-story" data-cp="14">Shortly after, I won my first hackathon, building a drone with sensors to detect soil pollution for a Dutch water company. A working prototype in three days. I discovered I could present, think outside the box, build things, and win. At eighteen, I registered my first business.</p>
+<figure class="section-image"><img src="images/jims_story_sections/js_section_2_the_moment_everything_clicked.png" alt="The Moment Everything Clicked" loading="lazy"></figure>
+<div class="section" id="success-sabotage-and-burnout-7">
+<h2 data-para="51" data-cs="a-note-from-jim-my-story" data-cp="15">Success, Sabotage, and Burnout</h2>
+<p data-para="52" data-cs="a-note-from-jim-my-story" data-cp="16">What followed was a decade of chasing, building, winning, and then destroying everything I had created. After experimenting with at least ten different business models, I built a women&#x27;s fashion e-commerce brand. It grew to sixty thousand Instagram followers and generated over a million euros in revenue. Finally, external validation. Stripe notifications, follower counts, dopamine hits on demand.</p>
+<p data-para="53" data-cs="a-note-from-jim-my-story" data-cp="17">But women&#x27;s handbags were not my passion. When regulations changed and the business required inventory and logistics, I fell apart. I had to let it go, and letting go took me two years of mourning. I did not understand why at the time. Later, I realized: that business was proof of my worth. Letting it go meant letting go of the only evidence I had that I was not broken.</p>
+<p data-para="54" data-cs="a-note-from-jim-my-story" data-cp="18">Then came the dark period. I lived for weekends, partying, festivals, drugs. During the week, I was just waiting for the next escape. I had no idea what I wanted. I kept starting new things, getting excited, and then not following through.</p>
+<figure class="section-image"><img src="images/jims_story_sections/js_section_3_success_sabotage_and_burnout.png" alt="Success, Sabotage, and Burnout" loading="lazy"></figure>
+<div class="section" id="the-diagnosis-8">
+<h2 data-para="55" data-cs="a-note-from-jim-my-story" data-cp="19">The Diagnosis</h2>
+<p data-para="56" data-cs="a-note-from-jim-my-story" data-cp="20">During the COVID lockdowns, I started doing a lot of reflection. I began meditating, exploring mindfulness, and eventually tried psilocybin mushrooms. During that experience, I received a clear message: your mind is too busy. Too busy. Too busy.</p>
+<p data-para="57" data-cs="a-note-from-jim-my-story" data-cp="21">I wrote it down. After the experience ended, I went to my doctor. I got tested. And at twenty-four years old, I finally had an answer: ADHD.</p>
+<p data-para="58" data-cs="a-note-from-jim-my-story" data-cp="22">The diagnosis helped at first. I started Ritalin, and suddenly I could focus. I enrolled in a consulting course and committed to niching down: real estate websites. For a while, it worked. But the medication that gave me focus took everything else. I became isolated, obsessive, perfectionistic. I rebuilt my own website twenty times in a single year because I was terrified to go public. The medication let me grind, but it disconnected me from my emotions, my relationships, my health. I burned out. Hard.</p>
+<blockquote data-para="59" data-cs="a-note-from-jim-my-story" data-cp="23"><p>There were nights when my girlfriend came home at 3 AM from a night out, and I was still at my desk, alone, working on yet another rebrand that no one would ever see. The Ritalin let me focus, but I had lost the plot completely.</p><cite>— Jim Ebbelaar</cite></blockquote>
+<figure class="section-image"><img src="images/jims_story_sections/js_section_4_the_diagnosis.png" alt="The Diagnosis" loading="lazy"></figure>
+<div class="section" id="the-healing-9">
+<h2 data-para="60" data-cs="a-note-from-jim-my-story" data-cp="24">The Healing</h2>
+<p data-para="61" data-cs="a-note-from-jim-my-story" data-cp="25">What followed was the most important journey of my life. It was not just one thing. It was a combination of everything working together. Inner work like meditation and processing old patterns. But equally important: learning about habit systems, nervous system regulation, biological optimization, environment design, and building structures that actually worked with my brain. The spiritual side mattered, but so did the practical science. It was the integration of both that finally created lasting change.</p>
+<p data-para="62" data-cs="a-note-from-jim-my-story" data-cp="26">I started to understand the patterns that had been running my life. I discovered that my default state was not good enough. I had a good childhood. Both my parents come from farming families, hardworking people who did their best. I was well taken care of, and I am grateful for the values they instilled in me. My parents did eventually separate, and while I was never neglected, there were times when the warmth felt a bit distant. This is not a criticism of my parents. It is simply part of my story.</p>
+<p data-para="63" data-cs="a-note-from-jim-my-story" data-cp="27">What I do know is that growing up with undiagnosed ADHD meant I struggled with things that seemed easy for everyone else. My brother excelled at everything effortlessly. The CITO test confirmed what I already feared. Over time, these experiences quietly built a belief that I was not good enough. This belief had been sabotaging me for years. Every time I got close to real success, I would blow it up. My nervous system could not tolerate success because success did not match my identity.</p>
+<figure class="section-image"><img src="images/jims_story_sections/js_section_5_the_healing.png" alt="The Healing" loading="lazy"></figure>
+<div class="section" id="building-with-my-brain-10">
+<h2 data-para="64" data-cs="a-note-from-jim-my-story" data-cp="28">Building With My Brain</h2>
+<p data-para="65" data-cs="a-note-from-jim-my-story" data-cp="29">Eventually, I made the decision to stop taking Ritalin. For me, this was the right choice, but I want to be very clear: I am not a doctor. If you are considering any changes to your medication, please consult your healthcare provider first. Everyone&#x27;s situation is different.</p>
+<p data-para="66" data-cs="a-note-from-jim-my-story" data-cp="30">Here is my honest perspective on medication: it can be a valuable kickstart. Ritalin genuinely helped me in the beginning. But for me personally, I do not believe it was a sustainable long-term solution. I see medication as more of a bridge than a destination. It managed symptoms, but it did not teach me how to regulate my nervous system, how to build systems around my brain, or how to actually live well with ADHD. That work I had to do separately, and that is what ultimately made the difference.</p>
+<p data-para="67" data-cs="a-note-from-jim-my-story" data-cp="31">Instead of medicating away my ADHD, I decided to build around it. Everything I could not do well, I outsourced. Everything that required my unique abilities, vision, strategy, presentation, transformation, I kept. I built systems that worked with my brain instead of against it. I hired people whose strengths complemented my weaknesses. I learned about nervous system regulation, habit architecture, and environment design.</p>
+<p data-para="68" data-cs="a-note-from-jim-my-story" data-cp="32">Today, I run an award-winning digital agency, and I do it without medication. Because I discovered that for me, the real solution was not suppressing my brain. It was building a life that fit my brain. That is what ADHD Harmony is about. Not fixing you. Not making you neurotypical. Building a life where your brain is an asset, not a liability.</p>
+<blockquote data-para="69" data-cs="a-note-from-jim-my-story" data-cp="33"><p>The lesson of my life is simple: I was not broken. I was just running the wrong operating system. The moment I stopped fighting my brain and started working with it, everything changed. That is what I want for you.</p><cite>— Jim Ebbelaar</cite></blockquote>
+<figure class="section-image"><img src="images/jims_story_sections/js_section_6_building_with_my_brain.png" alt="Building With My Brain" loading="lazy"></figure>
+<section class="chapter" id="the-operating-manual-you-never-received">
+<h1 data-para="70">The Operating Manual You Never Received</h1>
+<div class="ornament"></div>
+<p data-para="71" data-cs="the-operating-manual-you-never-received" data-cp="0">Understanding the unique architecture of your ADHD brain.</p>
+<p data-para="72" data-cs="the-operating-manual-you-never-received" data-cp="1">Before we dive into the six-week program, you need to understand how your brain actually works. Not the oversimplified version. The real version. Because once you understand the mechanics, the strategies in this program stop being arbitrary advice and start being obvious solutions.</p>
+<div class="section" id="the-adhd-brain-a-ferrari-with-bicycle-brakes-11">
+<h2 data-para="73" data-cs="the-operating-manual-you-never-received" data-cp="2">The ADHD Brain: A Ferrari with Bicycle Brakes</h2>
+<p data-para="74" data-cs="the-operating-manual-you-never-received" data-cp="3">Dr. Edward Hallowell and Dr. John Ratey, who have spent decades researching ADHD, offer a reframe that changes everything: the ADHD brain is not deficient. It is different. They describe it as a Ferrari engine with bicycle brakes. The power is there. The speed is there. What is often missing is the braking system, the ability to regulate, to slow down, to direct all that energy where it needs to go.</p>
+<blockquote data-para="75" data-cs="the-operating-manual-you-never-received" data-cp="4"><p>ADHD is a terrible name for what is actually a remarkable brain. The problem is not attention deficit. It is attention dysregulation. We have too much attention, not too little.</p><cite>— Dr. Edward Hallowell</cite></blockquote>
+<p data-para="76" data-cs="the-operating-manual-you-never-received" data-cp="5">Think about it: the same brain that cannot focus on a boring report for twenty minutes can hyperfocus on a video game for six hours. The same mind that forgets appointments can remember every detail of an interesting conversation from five years ago. The issue is not broken attention. It is that attention flows toward interest, not importance.</p>
+<figure class="section-image"><img src="images/operating_manual_sections/om_section_1_the_adhd_brain_a_ferrari_with_bicycle_brakes.png" alt="The ADHD Brain: A Ferrari with Bicycle Brakes" loading="lazy"></figure>
+<div class="section" id="the-dopamine-difference-12">
+<h2 data-para="77" data-cs="the-operating-manual-you-never-received" data-cp="6">The Dopamine Difference</h2>
+<p data-para="78" data-cs="the-operating-manual-you-never-received" data-cp="7">At the core of ADHD is a difference in dopamine regulation. Dopamine is not the pleasure chemical, as commonly believed. It is the motivation chemical, the neurotransmitter that makes things feel important, urgent, and worth pursuing.</p>
+<p data-para="79" data-cs="the-operating-manual-you-never-received" data-cp="8">The ADHD brain has lower baseline dopamine levels and fewer dopamine receptors in key areas. This means that activities which feel normally engaging to neurotypical brains often feel flat, boring, or impossible to focus on for us. Meanwhile, activities that spike dopamine, novelty, urgency, passion, crisis, can capture our attention with remarkable intensity.</p>
+<p data-para="80" data-cs="the-operating-manual-you-never-received" data-cp="9">This explains so much of the ADHD experience. Why you can play video games for six hours but cannot focus on a report for twenty minutes. Why a looming deadline suddenly makes you productive. Why you are constantly seeking novelty, new projects, new ideas. Your brain is looking for dopamine, and it will find it wherever it can.</p>
+<figure class="section-image"><img src="images/operating_manual_sections/om_section_2_the_dopamine_difference.png" alt="The Dopamine Difference" loading="lazy"></figure>
+<div class="section" id="the-pleasure-pain-balance-13">
+<h2 data-para="81" data-cs="the-operating-manual-you-never-received" data-cp="10">The Pleasure-Pain Balance</h2>
+<p data-para="82" data-cs="the-operating-manual-you-never-received" data-cp="11">Dr. Anna Lembke&#x27;s research in Dopamine Nation reveals something crucial: pleasure and pain are processed in the same part of the brain, and they work like a balance scale. When you experience pleasure, the brain tips toward pleasure, but then it automatically tips an equal amount toward pain to restore equilibrium. This is called homeostasis.</p>
+<blockquote data-para="83" data-cs="the-operating-manual-you-never-received" data-cp="12"><p>The relentless pursuit of pleasure leads to pain. The strategic use of pain leads to pleasure.</p><cite>— Dr. Anna Lembke</cite></blockquote>
+<p data-para="84" data-cs="the-operating-manual-you-never-received" data-cp="13">For the ADHD brain, which is constantly seeking dopamine hits, this has profound implications. Every quick fix, the social media scroll, the sugar rush, the online shopping spree, creates a pleasure spike followed by a dopamine deficit. Over time, you need more stimulation just to feel normal. The baseline drops. This is how the modern world creates a state of chronic dopamine deficit.</p>
+<p data-para="85" data-cs="the-operating-manual-you-never-received" data-cp="14">The solution is not to eliminate pleasure. It is to reset the balance. Brief periods of discomfort, cold showers, exercise, fasting, boredom, tip the scale toward pain, which then triggers a natural rebound toward pleasure. Leaning into difficulty creates sustainable wellbeing in a way that chasing pleasure never can. This counterintuitive principle runs through every week of this program.</p>
+<figure class="section-image"><img src="images/operating_manual_sections/om_section_3_the_pleasure-pain_balance.png" alt="The Pleasure-Pain Balance" loading="lazy"></figure>
+<div class="section" id="the-developmental-view-14">
+<h2 data-para="86" data-cs="the-operating-manual-you-never-received" data-cp="15">The Developmental View</h2>
+<p data-para="87" data-cs="the-operating-manual-you-never-received" data-cp="16">Dr. Gabor Maté offers a complementary perspective in Scattered Minds. He argues that ADHD is not simply genetic. It develops in the interaction between a sensitive temperament and the environment, particularly the early attachment environment. Children who become ADHD adults are often born with heightened sensitivity. In the right environment, this sensitivity becomes a gift: intuition, creativity, empathy. But in stressful environments, this same sensitivity leads to chronic activation of the stress response.</p>
+<blockquote data-para="88" data-cs="the-operating-manual-you-never-received" data-cp="17"><p>The sensitive child who becomes an ADHD adult was not born with a deficit. They were born with a difference that, in the absence of the right conditions, became a struggle.</p><cite>— Dr. Gabor Maté</cite></blockquote>
+<p data-para="89" data-cs="the-operating-manual-you-never-received" data-cp="18">This matters because it shifts the frame from disorder to adaptation. Your scattered attention is not a malfunction. It is a strategy your brain learned to cope with overwhelm. Understanding this allows self-compassion rather than self-criticism, which is itself the foundation for change.</p>
+<figure class="section-image"><img src="images/operating_manual_sections/om_section_4_the_developmental_view.png" alt="The Developmental View" loading="lazy"></figure>
+<div class="section" id="the-power-of-connection-15">
+<h2 data-para="90" data-cs="the-operating-manual-you-never-received" data-cp="19">The Power of Connection</h2>
+<p data-para="91" data-cs="the-operating-manual-you-never-received" data-cp="20">Hallowell and Ratey emphasize something often overlooked in ADHD treatment: the power of connection. They call it Vitamin Connect, the neurological benefits of positive human interaction. When we feel connected, seen, and understood, the brain releases oxytocin and other neurochemicals that improve focus, reduce anxiety, and enhance executive function. Isolation, on the other hand, exacerbates every ADHD symptom.</p>
+<blockquote data-para="92" data-cs="the-operating-manual-you-never-received" data-cp="21"><p>The best treatment for ADHD is not a pill. It is a person. Someone who believes in you, who sees your potential, who refuses to let you give up on yourself.</p><cite>— Jim Ebbelaar</cite></blockquote>
+<p data-para="93" data-cs="the-operating-manual-you-never-received" data-cp="22">This is why community is built into this program. Not as an add-on, but as medicine.</p>
+<figure class="section-image"><img src="images/operating_manual_sections/om_section_5_the_power_of_connection.png" alt="The Power of Connection" loading="lazy"></figure>
+<div class="section" id="the-middle-way-16">
+<h2 data-para="94" data-cs="the-operating-manual-you-never-received" data-cp="23">The Middle Way</h2>
+<p data-para="95" data-cs="the-operating-manual-you-never-received" data-cp="24">This blueprint fuses cutting-edge neuroscience from experts like Dr. Andrew Huberman and Dr. Anna Lembke, timeless philosophy from thinkers like Naval Ravikant and Eckhart Tolle, developmental insights from Dr. Gabor Maté, practical wisdom from books like Psycho-Cybernetics and Atomic Habits, and brain-based systems designed specifically for how the ADHD mind operates.</p>
+<p data-para="96" data-cs="the-operating-manual-you-never-received" data-cp="25">There are two dominant approaches to self-improvement, and both have limitations. Hustle culture brings intensity, discipline, and pain tolerance, but it can burn the ADHD brain out through hyperfocus sprints that leave us depleted for days. The manifestation approach brings presence and acceptance, but it can become passive, mistaking peace for stagnation.</p>
+<p data-para="97" data-cs="the-operating-manual-you-never-received" data-cp="26">The ADHD Harmony approach is the middle way: intensity with regulation. We build strength without frying our nervous system. We push ourselves while honoring our limits. We pursue ambitious goals while maintaining the biological foundation that makes achievement sustainable.</p>
+<blockquote data-para="98" data-cs="the-operating-manual-you-never-received" data-cp="27"><p>I burned out twice before I learned this lesson: you can sprint, but you cannot sprint forever. The goal is not to work harder. It is to build a system that lets you work effectively for decades.</p><cite>— Jim Ebbelaar</cite></blockquote>
+<p data-para="99" data-cs="the-operating-manual-you-never-received" data-cp="28">Understanding your brain is the first step. In the full ADHD Harmony program, Harmony AI generates a personalized profile based on your unique patterns, your dopamine triggers, your energy cycles, your emotional landscape, and shows you exactly where to focus first. Combined with live coaching where Jim translates the neuroscience into your specific daily life, you stop reading about your brain and start actually working with it.</p>
+<figure class="section-image"><img src="images/operating_manual_sections/om_section_6_the_middle_way.png" alt="The Middle Way" loading="lazy"></figure>
+<section class="chapter" id="the-6-principles-of-adhd-harmony">
+<h1 data-para="100">The 6 Principles of ADHD Harmony</h1>
+<div class="ornament"></div>
+<p data-para="101" data-cs="the-6-principles-of-adhd-harmony" data-cp="0">Before we get into the weekly program, I want to give you the operating philosophy behind everything you are about to learn. These are not motivational posters. These are the six truths that hold the entire system together. Every exercise, every protocol, every week ties back to one or more of these principles.</p>
+<p data-para="102" data-cs="the-6-principles-of-adhd-harmony" data-cp="1">I distilled these after years of reading, experimenting, failing, and rebuilding. They come from neuroscience, ancient wisdom, and lived experience. When you understand the principles, the tactics stop feeling random. They start feeling obvious.</p>
+<p data-para="103" data-cs="the-6-principles-of-adhd-harmony" data-cp="2">Think of them as the source code. The weeks are the application. If you ever feel lost during the program, come back here. These will reorient you.</p>
+<div class="section" id="principle-1-inside-out-transformation-17">
+<h2 data-para="104" data-cs="the-6-principles-of-adhd-harmony" data-cp="3">Principle 1: Inside-Out Transformation.</h2>
+<p data-para="105" data-cs="the-6-principles-of-adhd-harmony" data-cp="4">The world sells you external fixes. A better app. A new routine. The right supplement. But lasting change never starts with your environment. It starts with your identity. Your life will always reorganize itself to match your self-concept. Change the inner operating system first, and the outer results follow. Try to force the outer results without the inner shift, and you will keep snapping back to your old patterns. This principle runs through every single week.</p>
+<figure class="section-image"><img src="images/principles/principle_1.png" alt="Principle 1: Inside-Out Transformation." loading="lazy"></figure>
+<div class="section" id="principle-2-thoughts-become-things-18">
+<h2 data-para="106" data-cs="the-6-principles-of-adhd-harmony" data-cp="5">Principle 2: Thoughts Become Things.</h2>
+<p data-para="107" data-cs="the-6-principles-of-adhd-harmony" data-cp="6">Every thought produces a chemical reaction. That chemical becomes a feeling. That feeling drives your next thought. This loop creates your state of being, your personality, and ultimately your personal reality. This is not philosophy. It is neuroscience. For the ADHD brain, which runs hotter and faster than most, this loop can work for you or against you. The program teaches you to make it work for you.</p>
+<figure class="section-image"><img src="images/principles/principle_2.png" alt="Principle 2: Thoughts Become Things." loading="lazy"></figure>
+<div class="section" id="principle-3-the-mirror-principle-19">
+<h2 data-para="108" data-cs="the-6-principles-of-adhd-harmony" data-cp="7">Principle 3: The Mirror Principle.</h2>
+<p data-para="109" data-cs="the-6-principles-of-adhd-harmony" data-cp="8">Your external reality is a feedback loop. The relationships you attract, the opportunities that show up, the obstacles you face. All mirrors. When you operate from fear, you get fearful outcomes. When you operate from wholeness, the world responds differently. This is not magical thinking. It is pattern recognition. Fix the signal, and you fix the reflection.</p>
+<figure class="section-image"><img src="images/principles/principle_3.png" alt="Principle 3: The Mirror Principle." loading="lazy"></figure>
+<div class="section" id="principle-4-clarity-over-complexity-20">
+<h2 data-para="110" data-cs="the-6-principles-of-adhd-harmony" data-cp="9">Principle 4: Clarity Over Complexity.</h2>
+<p data-para="111" data-cs="the-6-principles-of-adhd-harmony" data-cp="10">The ADHD brain does not struggle because it lacks ideas. It struggles because it has too many. Clarity is not about adding more direction. It is about cutting away everything that is not essential. One or two Big Rocks will always outperform twenty scattered goals. Addition requires subtraction. Energy cannot be created, only redirected. Every protocol in this program is designed to be as simple as possible, because complexity is where ADHD brains go to die.</p>
+<figure class="section-image"><img src="images/principles/principle_4.png" alt="Principle 4: Clarity Over Complexity." loading="lazy"></figure>
+<div class="section" id="principle-5-consistency-over-perfection-21">
+<h2 data-para="112" data-cs="the-6-principles-of-adhd-harmony" data-cp="11">Principle 5: Consistency Over Perfection</h2>
+<p data-para="113" data-cs="the-6-principles-of-adhd-harmony" data-cp="12">You will miss days. You will fall off. That is not failure. That is being human with an ADHD brain. The only skill that matters is coming back. Never miss two days in a row. One missed day is a blip. Two missed days is the start of a new pattern. This program does not ask for perfection. It trains the comeback. If you can master that one skill, everything else becomes possible.</p>
+<figure class="section-image"><img src="images/principles/principle_5.png" alt="Principle 5: Consistency Over Perfection" loading="lazy"></figure>
+<div class="section" id="principle-6-evidence-over-belief-22">
+<h2 data-para="114" data-cs="the-6-principles-of-adhd-harmony" data-cp="13">Principle 6: Evidence Over Belief</h2>
+<p data-para="115" data-cs="the-6-principles-of-adhd-harmony" data-cp="14">Affirmations without action are lies you tell yourself. Your ADHD brain has accumulated a lifetime of negative evidence: unfinished projects, broken promises, abandoned systems. You cannot out-affirm that. You can only out-evidence it. Every check-in you complete, every workout you show up for, every time you fall and get back up, that is a vote for your new identity. Stack enough votes, and the old story loses its grip.</p>
+<figure class="section-image"><img src="images/principles/principle_6.png" alt="Principle 6: Evidence Over Belief" loading="lazy"></figure>
+<p data-para="116" data-cs="the-6-principles-of-adhd-harmony" data-cp="15">These six principles are not separate ideas. They are one system. Inside-out transformation tells you where change starts. Thoughts become things shows you the mechanism. The mirror principle reveals the feedback loop. Clarity over complexity keeps you focused. Consistency over perfection keeps you in the game. And evidence over belief makes the new identity stick.</p>
+<p data-para="117" data-cs="the-6-principles-of-adhd-harmony" data-cp="16">Keep them close. You will see them everywhere once you start the weekly work.</p>
+<figure class="section-image"><img src="images/principles/principles_combined.png" alt="Chapter overview" loading="lazy"></figure>
+<section class="chapter" id="the-6-week-roadmap">
+<h1 data-para="118">The 6-Week Roadmap</h1>
+<div class="ornament"></div>
+<figure class="section-image"><img src="images/weeks/ADHD Harmony 6 Week Roadmap.png" alt="The 6-Week Roadmap" loading="lazy"></figure>
+<p data-para="119" data-cs="the-6-week-roadmap" data-cp="0">Here is where we are going. Six weeks. Six layers. Each one builds on the last. You cannot skip ahead, because the order is the system.</p>
+<p data-para="120" data-cs="the-6-week-roadmap" data-cp="1">Most programs start with productivity hacks. We do not. We start with the foundation and work up. There is a reason for that. Every layer depends on the one beneath it. Try to be productive without regulating your biology and you burn out. Try to change your identity without mastering your emotions and the old patterns drag you back. The sequence is not random. It is architecture.</p>
+<p data-para="121" data-cs="the-6-week-roadmap" data-cp="2">Week 1: Baseline and North Star. Find your direction. You get ruthlessly clear on where you are and where you are going. Two Big Rocks maximum. A Commitment Letter that turns intention into action. Clarity through subtraction, not addition.</p>
+<p data-para="122" data-cs="the-6-week-roadmap" data-cp="3">Week 2: Biological Regulation. Calibrate your body. Sleep, movement, and nutrition become your power supply. You find your first domino, the one change that makes everything else easier. You learn why the first two weeks are the hardest and why it gets dramatically easier after that.</p>
+<p data-para="123" data-cs="the-6-week-roadmap" data-cp="4">Week 3: Emotional Mastery. Turn intensity into fuel. You learn that thoughts become things, that you are not the voice in your head, and that emotions are data, not destiny. You build a three-minute comeback protocol for when things spiral. The goal is not to stop falling. It is to fall less deep and recover faster.</p>
+<p data-para="124" data-cs="the-6-week-roadmap" data-cp="5">Week 4: Identity Transformation. Become who you really are. Inside-out change. Shedding survival masks. Rewriting your self-image. This is the deepest week, and for many people, the most powerful. You design your future self with enough detail that your brain can start rehearsing it.</p>
+<p data-para="125" data-cs="the-6-week-roadmap" data-cp="6">Week 5: Productivity and Environment. Build systems for your brain. Not someone else&#x27;s system. Yours. You find your purpose through Ikigai, learn to recognize The Mirage before it pulls you off course, and design your environment so the right choice becomes the default.</p>
+<p data-para="126" data-cs="the-6-week-roadmap" data-cp="7">Week 6: Integration and The Long Game. Make it who you are. Never miss two days. The evidence stack. The comeback protocol. This week is about making sure everything you built in weeks one through five does not disappear the moment life gets hard. Because it will. And now you will be ready.</p>
+<p data-para="127" data-cs="the-6-week-roadmap" data-cp="8">Each week has exercises. Each week has a community prompt. The exercises are short and ADHD-friendly. The community prompts are not optional but recommended. Posting is implementation. Implementation is transformation.</p>
+<p data-para="128" data-cs="the-6-week-roadmap" data-cp="9">You do not need to see the whole staircase. You just need to take the first step.</p>
+<p data-para="129" data-cs="the-6-week-roadmap" data-cp="10">Let us start with Week 1.</p>
+<section class="chapter week-chapter" id="week-1-baseline-and-north-star">
+<figure class="section-image"><img src="images/weeks/week_1.png" alt="Week 1: Baseline and North Star" loading="lazy"></figure>
+<h1 data-para="130">Week 1: Baseline and North Star</h1>
+<div class="ornament"></div>
+<p data-para="131" data-cs="week-1-baseline-and-north-star" data-cp="0">Establish where you are. Set where you are going.</p>
+<p data-para="132" data-cs="week-1-baseline-and-north-star" data-cp="1">This first week is your essential starting point: getting ruthlessly clear on what matters. Before you can build new systems, you must first understand why your current patterns exist and choose a direction worth following.</p>
+<p data-para="133" data-cs="week-1-baseline-and-north-star" data-cp="2">By the end of this week, you will have a clear baseline through your first weekly check-in, your one to two Big Rocks for the year ahead, a Commitment Letter with a relapse plan, and the friction-reducing foundations that set you up for the weeks ahead.</p>
+<div class="section" id="the-adhd-clarity-problem-23">
+<h2 data-para="134" data-cs="week-1-baseline-and-north-star" data-cp="3">The ADHD Clarity Problem</h2>
+<p data-para="135" data-cs="week-1-baseline-and-north-star" data-cp="4">The ADHD brain breaks on complexity. Not because it is incapable of handling complex things, quite the opposite. The ADHD brain sees too many possibilities, makes too many connections, gets excited about too many directions. What looks like distraction is often just an abundance of potential. But potential without focus is just chaos.</p>
+<p data-para="136" data-cs="week-1-baseline-and-north-star" data-cp="5">This is why the New Year buffet plate approach to goal-setting fails catastrophically for the ADHD mind. Twenty-four goals means twenty-four sources of guilt, twenty-four incomplete projects, twenty-four reasons to feel like a failure. Fewer priorities means more follow-through.</p>
+<blockquote data-para="137" data-cs="week-1-baseline-and-north-star" data-cp="6"><p>You can do anything, but not everything.</p><cite>— David Allen</cite></blockquote>
+<p data-para="138" data-cs="week-1-baseline-and-north-star" data-cp="7">I learned this through painful repetition. E-commerce, then consulting, then automation, then crypto, then AI tools, then websites, then coaching. Every shiny object captured my attention. I started more projects than I can count. I finished almost none. Each abandoned effort felt like evidence that I was fundamentally broken. The truth was simpler: I was trying to do everything, so I accomplished nothing. The problem was not capacity. It was clarity.</p>
+<figure class="section-image"><img src="images/week1_sections/w1_section_1_the_adhd_clarity_problem.png" alt="The ADHD Clarity Problem" loading="lazy"></figure>
+<div class="section" id="the-two-acts-of-clarity-24">
+<h2 data-para="139" data-cs="week-1-baseline-and-north-star" data-cp="8">The Two Acts of Clarity</h2>
+<p data-para="140" data-cs="week-1-baseline-and-north-star" data-cp="9">The first act of clarity is selection: choosing what matters most right now and giving yourself permission to let everything else wait. One or two Big Rocks will accomplish more than a dozen good intentions scattered across every area of life.</p>
+<p data-para="141" data-cs="week-1-baseline-and-north-star" data-cp="10">The second act of clarity is subtraction: recognizing that addition requires subtraction. If you add a new habit, you must remove something. Time, energy, attention. The laws of physics apply to your life as much as to the universe. Energy cannot be created, only redirected.</p>
+<figure class="section-image"><img src="images/week1_sections/w1_section_2_the_two_acts_of_clarity.png" alt="The Two Acts of Clarity" loading="lazy"></figure>
+<div class="section" id="picking-your-big-rocks-25">
+<h2 data-para="142" data-cs="week-1-baseline-and-north-star" data-cp="11">Picking Your Big Rocks</h2>
+<p data-para="143" data-cs="week-1-baseline-and-north-star" data-cp="12">Work through these questions honestly. Do not rush. Let your answers surprise you.</p>
+<p data-para="144" data-cs="week-1-baseline-and-north-star" data-cp="13">What would need to happen by the end of this year for me to call it a success?</p>
+<p data-para="145" data-cs="week-1-baseline-and-north-star" data-cp="14">If your life was a movie, what would the audience be screaming at you to do?</p>
+<p data-para="146" data-cs="week-1-baseline-and-north-star" data-cp="15">What keeps coming up in your reflections, the theme that will not go away?</p>
+<p data-para="147" data-cs="week-1-baseline-and-north-star" data-cp="16">If you could only pick one to two things to focus on for the next six months, and everything else had to wait, what would they be?</p>
+<p data-para="148" data-cs="week-1-baseline-and-north-star" data-cp="17">Maximum two Big Rocks. Everything else goes to Later. Not abandoned, just not now. Examples:</p>
+<p data-para="149" data-cs="week-1-baseline-and-north-star" data-cp="18">I become physically stable through sleep and training.</p>
+<p data-para="150" data-cs="week-1-baseline-and-north-star" data-cp="19">I build one clear career or business focus.</p>
+<p data-para="151" data-cs="week-1-baseline-and-north-star" data-cp="20">I repair my relationship with myself.</p>
+<p data-para="152" data-cs="week-1-baseline-and-north-star" data-cp="21">I get my finances under control.</p>
+<p data-para="153" data-cs="week-1-baseline-and-north-star" data-cp="22">I complete my creative project.</p>
+<figure class="section-image"><img src="images/week1_sections/w1_section_3_picking_your_big_rocks.png" alt="Picking Your Big Rocks" loading="lazy"></figure>
+<div class="section" id="the-anti-goals-framework-26">
+<h2 data-para="154" data-cs="week-1-baseline-and-north-star" data-cp="23">The Anti-Goals Framework</h2>
+<p data-para="155" data-cs="week-1-baseline-and-north-star" data-cp="24">Knowing what you are moving toward is powerful. But sometimes it is easier to know what you are running from. Pain avoidance can be more motivating than pleasure seeking, and for the ADHD brain, emotional intensity often drives action better than logic.</p>
+<p data-para="156" data-cs="week-1-baseline-and-north-star" data-cp="25">For each area of life, ask: what would I absolutely hate for my life to look like in five years? What would make me miserable? What am I terrified of becoming? Then write the opposite as a goal.</p>
+<p data-para="157" data-cs="week-1-baseline-and-north-star" data-cp="26">The extreme version: imagine yourself at age eighty-five, stuck with your worst current habit for the rest of your life. Feel how miserable that would be. Let that emotional pain fuel your commitment to change now.</p>
+<blockquote data-para="158" data-cs="week-1-baseline-and-north-star" data-cp="27"><p>I do not want to be eighty-five years old, still scrolling, still distracted, still wondering what I could have built if I had just focused. That image keeps me honest.</p><cite>— Jim Ebbelaar</cite></blockquote>
+<figure class="section-image"><img src="images/week1_sections/w1_section_4_the_anti-goals_framework.png" alt="The Anti-Goals Framework" loading="lazy"></figure>
+<div class="section" id="your-commitment-letter-27">
+<h2 data-para="159" data-cs="week-1-baseline-and-north-star" data-cp="28">Your Commitment Letter</h2>
+<p data-para="160" data-cs="week-1-baseline-and-north-star" data-cp="29">You now have clarity on what you want and what you do not want. The final step is making it real by turning intention into commitment. This is a contract with yourself. Not a wish list, a commitment.</p>
+<div class="template" data-para="161" data-cs="week-1-baseline-and-north-star" data-cp="30"><p>I, [your name], am here because [why you started this program, be specific about your pain and your hope]. I commit to [showing up, not perfection, completing check-ins, doing the exercises, engaging with the community]. When it gets hard, and it will, I will [your specific plan: reach out to the community, return to my Big Rocks, do my bare minimum protocol, remember why I started]. I understand that transformation is not linear. I will fall. What matters is that I come back.</p></div>
+<p data-para="162" data-cs="week-1-baseline-and-north-star" data-cp="31">Post your Commitment Letter in the community, even a shortened version. External accountability multiplies internal resolve. There is something about saying it to real people that makes it stick differently than writing it alone.</p>
+<p data-para="163" data-cs="week-1-baseline-and-north-star" data-cp="32">Share your one or two Big Rocks. When others see yours, it helps them clarify theirs. And introduce yourself if you have not already. One sentence about why you are here.</p>
+<p data-para="164" data-cs="week-1-baseline-and-north-star" data-cp="33">This is not optional extra credit. This is implementation. Information without action is just sophisticated procrastination, and posting is action.</p>
+<div class="community-action">
+<div class="community-action-label">Community Action</div>
+<div class="community-template-box" data-template="My Big Rocks: [your 1-2 Big Rocks]. I am here because [why you started, be specific about your pain and your hope]. I commit to [showing up, not perfection, completing check-ins, doing the exercises, engaging with the community]. When it gets hard, I will [your specific plan: reach out to the community, return to my Big Rocks, do my bare minimum protocol, remember why I started].">
+<p>My Big Rocks: <span class="bracket">[your 1-2 Big Rocks]</span>. I am here because <span class="bracket">[why you started, be specific about your pain and your hope]</span>. I commit to <span class="bracket">[showing up, not perfection, completing check-ins, doing the exercises, engaging with the community]</span>. When it gets hard, I will <span class="bracket">[your specific plan: reach out to the community, return to my Big Rocks, do my bare minimum protocol, remember why I started]</span>.</p>
+<div class="copy-post-bar">
+<button class="btn-copy" onclick="copyTemplate(this)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg> Copy template</button>
+<a class="btn-post" href="https://www.skool.com/adhd?c=c065df53224b4a1691cdf5640ece9a6e" target="_blank" rel="noopener" onclick="copyTemplate(this.previousElementSibling)">Post in community →</a>
+</div>
+</div>
+</div>
+<blockquote data-para="165" data-cs="week-1-baseline-and-north-star" data-cp="34"><p>You are already ahead of where you were before you began. Do not let perfectionism steal your progress.</p><cite>— Jim Ebbelaar</cite></blockquote>
+<figure class="section-image"><img src="images/week1_sections/w1_section_5_your_commitment_letter.png" alt="Your Commitment Letter" loading="lazy"></figure>
+<section class="chapter week-chapter" id="week-2-biological-regulation">
+<figure class="section-image"><img src="images/weeks/week_2.png" alt="Week 2: Biological Regulation" loading="lazy"></figure>
+<h1 data-para="166">Week 2: Biological Regulation</h1>
+<div class="ornament"></div>
+<p data-para="167" data-cs="week-2-biological-regulation" data-cp="0">Sleep. Movement. Nutrition. Nervous system, designed for ADHD brains.</p>
+<p data-para="168" data-cs="week-2-biological-regulation" data-cp="1">Consistent energy is the bedrock of all personal and professional achievement. For the ADHD brain, which often experiences significant peaks and troughs, establishing a stable biological baseline is non-negotiable. Think of this week as calibrating your power supply. These protocols create the essential energy required for higher-level tasks like deep work, emotional regulation, and consistent productivity.</p>
+<div class="section" id="find-your-first-domino-28">
+<h2 data-para="169" data-cs="week-2-biological-regulation" data-cp="2">Find Your First Domino</h2>
+<p data-para="170" data-cs="week-2-biological-regulation" data-cp="3">Before we dive into protocols, let us address the most common mistake: trying to fix everything at once. There is an order to change that most people ignore. They want the sexy results, discipline, deep work, peak productivity, before they have established the boring foundations. This is like demanding athletic performance from a body that has not slept in three days.</p>
+<p data-para="171" data-cs="week-2-biological-regulation" data-cp="4">The first domino must fall before domino nine. If you are waking up exhausted every day, sleep is your domino. If you have not moved your body in weeks, movement is your domino. If you are living on sugar crashes and caffeine, nutrition is your domino. Fix one thing. The others become easier. When in doubt, start with sleep, because it affects everything.</p>
+<figure class="section-image"><img src="images/week2_sections/w2_section_1_find_your_first_domino.png" alt="Find Your First Domino" loading="lazy"></figure>
+<div class="section" id="the-executive-function-trap-29">
+<h2 data-para="172" data-cs="week-2-biological-regulation" data-cp="5">The Executive Function Trap</h2>
+<p data-para="173" data-cs="week-2-biological-regulation" data-cp="6">Here is the cruel irony of ADHD: you need executive function to start doing the things that improve executive function. You need motivation to exercise, but exercise is what creates motivation. You need energy to sleep well, but sleeping well is what creates energy. It is a chicken-and-egg problem that can feel impossible to escape.</p>
+<p data-para="174" data-cs="week-2-biological-regulation" data-cp="7">Because of naturally lower baseline dopamine levels, starting something is genuinely harder for us. Whether it is starting a workout, making the decision to eat healthy, going to bed on time, or not grabbing your phone first thing in the morning, the very things that would help us most are the things that require the most effort to begin. The irony? While it is hardest for us, we also need it the most.</p>
+<h3 data-para="175" data-cs="week-2-biological-regulation" data-cp="8">The Breakthrough: Why It Gets Easier</h3>
+<p data-para="176" data-cs="week-2-biological-regulation" data-cp="9">Understanding the dopamine balance from the previous chapter explains why starting is hard. But here is the good news: there is a predictable timeline that will save you.</p>
+<p data-para="177" data-cs="week-2-biological-regulation" data-cp="10">During weeks one and two, this is hard. You are using willpower. You do not notice the benefits yet. You only have the downside of not having the quick dopamine hits. This is the grind phase. Then somewhere around weeks two and three, you start to feel some benefits. You gain some momentum. You start to realize: hey, maybe this is actually doable. By week three and beyond, the flywheel kicks in. Real momentum builds. The habit starts forming. After two to three weeks, it becomes who you are.</p>
+<p data-para="178" data-cs="week-2-biological-regulation" data-cp="11">Train yourself to constantly remind yourself: I can go for the bad option right now, but it will literally be about five minutes of pleasure. If I just decide to go for the good option, the workout, the healthy meal, going to bed on time, that can give me days of momentum.</p>
+<blockquote data-para="179" data-cs="week-2-biological-regulation" data-cp="12"><p>Take pain upfront. We are designed to seek quick comfort, especially with ADHD. But short-term relief almost always means long-term suffering. Do the hard thing first, and you will feel better after.</p><cite>— Jim Ebbelaar</cite></blockquote>
+<h3 data-para="180" data-cs="week-2-biological-regulation" data-cp="13">The 80/20 Rule</h3>
+<p data-para="181" data-cs="week-2-biological-regulation" data-cp="14">This entire program operates on the 80/20 principle. It is not about perfection. It is about progress over perfection. Eighty percent of the time, we try to go for the good option. Twenty percent of the time, we let it slip, and that is fine. We are humans. What matters is the overall pattern, not any single decision.</p>
+<figure class="section-image"><img src="images/week2_sections/w2_section_2_the_executive_function_trap.png" alt="The Executive Function Trap" loading="lazy"></figure>
+<div class="section" id="sleep-the-foundation-30">
+<h2 data-para="182" data-cs="week-2-biological-regulation" data-cp="15">Sleep: The Foundation</h2>
+<p data-para="183" data-cs="week-2-biological-regulation" data-cp="16">Real transformation happens while you rest.</p>
+<p data-para="184" data-cs="week-2-biological-regulation" data-cp="17">Sleep is the most important pillar. During sleep, many of the mechanisms we rely on, neuroplasticity, brain repair, emotional processing, memory consolidation, body repair, all happen. New neural pathways form. Emotions process. This is where change actually occurs.</p>
+<blockquote data-para="185" data-cs="week-2-biological-regulation" data-cp="18"><p>The difference between hope and despair is a good night&#x27;s sleep.</p><cite>— Bryan Johnson</cite></blockquote>
+<h3 data-para="186" data-cs="week-2-biological-regulation" data-cp="19">The Sleep Math</h3>
+<p data-para="187" data-cs="week-2-biological-regulation" data-cp="20">Laying in bed for eight hours is not getting eight hours of sleep. There is time to fall asleep. There are times you wake up during the night without even remembering it. On average, we are awake for about one to one and a half hours per night without knowing it. If you are in bed for eight hours, you probably have real sleep of just six to seven hours. Tracking changed everything for me. I could finally see the reality of my sleep, not the story I told myself about it.</p>
+<h3 data-para="188" data-cs="week-2-biological-regulation" data-cp="21">The Caffeine Trap</h3>
+<p data-para="189" data-cs="week-2-biological-regulation" data-cp="22">Caffeine has a half-life of five to six hours. If you have a cup of coffee at 4 PM and go to bed at 10 PM, half the caffeine is still active in your system. You might think: I still fall asleep fine. But a reason you still fall asleep easily might be because you are chronically overtired. Even if you fall asleep with caffeine in your system, you do not enter REM and deep sleep properly. You get light sleep, but not the sleep that actually restores your brain and body.</p>
+<p data-para="190" data-cs="week-2-biological-regulation" data-cp="23">The rule: No caffeine after lunch. This single change can create massive momentum for improving other behaviors.</p>
+<h3 data-para="191" data-cs="week-2-biological-regulation" data-cp="24">Revenge Bedtime Procrastination</h3>
+<p data-para="192" data-cs="week-2-biological-regulation" data-cp="25">When you do not like your days, nights become your escape. During the day, you do stuff that drains you. At night, you are finally allowed to do the things you are excited about: reading, Netflix, gaming. So you stay up late. The next morning you are exhausted, and the cycle repeats. The solution is to build days worth waking up for. That is what the later weeks of this program help you find.</p>
+<h3 data-para="193" data-cs="week-2-biological-regulation" data-cp="26">The Wind-Down Protocol</h3>
+<p data-para="194" data-cs="week-2-biological-regulation" data-cp="27">Start one hour before bed. Dim your lights to about fifty percent, because your brain needs darkness signals to produce melatonin. Put away screens. If you have trouble falling asleep, try a warm shower before bed. It raises your body temperature, and when you get into bed, your body naturally cools, helping you fall asleep faster. Instead of grabbing your phone, read a physical book. If you have racing thoughts, do a brain dump. Write down everything that is still on your mind in a physical journal. Empty the mental inbox.</p>
+<h3 data-para="195" data-cs="week-2-biological-regulation" data-cp="28">Sleep Essentials</h3>
+<p data-para="196" data-cs="week-2-biological-regulation" data-cp="29">Same bedtime daily, with the 80/20 rule on weekends. Aim for seven to nine hours of actual sleep. Room temperature between fifteen to nineteen degrees Celsius. Complete darkness. No caffeine eight or more hours before bed. Last meal two to three hours before bed. Phone in a different room. A sixty-minute wind-down routine.</p>
+<h3 data-para="197" data-cs="week-2-biological-regulation" data-cp="30">Optional Sleep Stack</h3>
+<p data-para="198" data-cs="week-2-biological-regulation" data-cp="31">For those who want to experiment: Magnesium L-Threonate is something I recommend to everyone, not just for sleep but as an essential supplement. L-Theanine helps calm the mind before bed. Inositol is worth adding if you tend to wake up during the night. It supports serotonin signaling and helps you stay asleep longer. Apigenin completes the stack. Take the combination thirty to sixty minutes before bed. If you do not struggle with sleep, do not use supplements. But during busy periods with racing thoughts, they can really help.</p>
+<figure class="section-image"><img src="images/week2_sections/w2_section_3_sleep_the_foundation.png" alt="Sleep: The Foundation" loading="lazy"></figure>
+<div class="section" id="movement-medicine-31">
+<h2 data-para="199" data-cs="week-2-biological-regulation" data-cp="32">Movement Medicine</h2>
+<p data-para="200" data-cs="week-2-biological-regulation" data-cp="33">Your brain&#x27;s natural stimulant.</p>
+<p data-para="201" data-cs="week-2-biological-regulation" data-cp="34">With sleep as your foundation, movement becomes the multiplier. The science is clear: thirty minutes of exercise gives you two to four hours of enhanced focus afterward. Research shows a two hundred percent increase in BDNF (brain growth factor), effects comparable to low-dose ADHD medication, and a seventy percent improvement in executive function. Movement releases dopamine, norepinephrine, and GABA, your brain&#x27;s natural pharmacy. Exercise is not optional. It is medicine.</p>
+<blockquote data-para="202" data-cs="week-2-biological-regulation" data-cp="35"><p>Exercise is the single best thing you can do for your brain. It increases blood flow, promotes neuroplasticity, releases BDNF, and regulates dopamine and norepinephrine, exactly the neurotransmitters that are dysregulated in ADHD.</p><cite>— Dr. John Ratey</cite></blockquote>
+<h3 data-para="203" data-cs="week-2-biological-regulation" data-cp="36">Stop Thinking. Just Go.</h3>
+<p data-para="204" data-cs="week-2-biological-regulation" data-cp="37">The hardest part is the five minutes before starting. Putting on your shoes. Getting to the gym. Once you are there and you just start, it becomes easy, even fun, most of the time. Within five minutes of doing a couple of reps or putting in a couple of steps, you have already forgotten you did not want to go. The mantra: stop thinking. Just go.</p>
+<h3 data-para="205" data-cs="week-2-biological-regulation" data-cp="38">The Foundation Protocol</h3>
+<p data-para="206" data-cs="week-2-biological-regulation" data-cp="39">For strength training, aim for two to four times per week, focusing on compound movements like squats, deadlifts, and presses. Even fifteen to twenty minutes provides benefits. For Zone 2 cardio, the optimal is one hundred fifty to one hundred eighty minutes per week, the intensity where you can still hold a conversation. Brisk walking counts. Morning walks provide maximum benefit. Any movement beats no movement.</p>
+<h3 data-para="207" data-cs="week-2-biological-regulation" data-cp="40">Find What Lights You Up</h3>
+<p data-para="208" data-cs="week-2-biological-regulation" data-cp="41">The most important thing is finding something that actually makes movement fun for you. Rock climbing combines problem-solving with physical challenge. Martial arts builds focus and discipline. Dance brings music and social connection. Team sports add competition and accountability. Hyrox is one I have been getting into lately, because signing up for a race creates instant accountability, the training community gives you connection, and the registration fee means you actually show up. I play padel tennis too, and it feels more like gaming than working out. Sustainable beats optimal. Find your thing.</p>
+<h3 data-para="209" data-cs="week-2-biological-regulation" data-cp="42">Making It Stick</h3>
+<p data-para="210" data-cs="week-2-biological-regulation" data-cp="43">Lay your clothes out the night before. Remove all friction. Use the five-minute rule: just start with five minutes. Track your progress visually with a calendar. Reward yourself immediately after. Find an accountability partner, or sign up for prepaid classes where you lose money if you do not show up.</p>
+<h3 data-para="211" data-cs="week-2-biological-regulation" data-cp="44">The Self-Image Transformation</h3>
+<p data-para="212" data-cs="week-2-biological-regulation" data-cp="45">It is not just about the workout. It is about building your self-image, building confidence, doing hard things, and upgrading your identity. By starting to show up consistently, your body starts to change. Then your confidence starts to grow. Your self-image shifts. Whether you want to start a business, pursue a new job, or change your relationships, by proving to yourself that you can become consistent, you start working toward the version of you that can pursue anything.</p>
+<blockquote data-para="213" data-cs="week-2-biological-regulation" data-cp="46"><p>If I can transform my body, I can transform my life. Every workout is proof you can do hard things. Physical change equals evidence that you can change.</p><cite>— Jim Ebbelaar</cite></blockquote>
+<figure class="section-image"><img src="images/week2_sections/w2_section_4_movement_medicine.png" alt="Movement Medicine" loading="lazy"></figure>
+<div class="section" id="nutrition-the-fuel-32">
+<h2 data-para="214" data-cs="week-2-biological-regulation" data-cp="47">Nutrition: The Fuel</h2>
+<p data-para="215" data-cs="week-2-biological-regulation" data-cp="48">Engineering stable energy for the ADHD brain.</p>
+<p data-para="216" data-cs="week-2-biological-regulation" data-cp="49">Sleep creates the foundation. Movement multiplies your energy. Nutrition determines what kind of fuel you are putting into the system. You can have the best sleep and exercise routine in the world, but if you are running on sugar crashes and processed food, you are sabotaging everything else.</p>
+<h3 data-para="217" data-cs="week-2-biological-regulation" data-cp="50">The Hijack</h3>
+<p data-para="218" data-cs="week-2-biological-regulation" data-cp="51">Food factories are designed to create bliss points, the exact combination of sugar, salt, and fat that makes food irresistible. In the 1800s, humans consumed about two pounds of sugar per year. Now it is one hundred fifty pounds. Blood sugar crashes cause seventy percent less prefrontal activity, meaning seventy percent less of the brain region responsible for focus, planning, and impulse control, exactly the areas already challenged by ADHD. Proper nutrition can reduce ADHD symptoms by thirty to fifty percent.</p>
+<h3 data-para="219" data-cs="week-2-biological-regulation" data-cp="52">The Morning Protocol</h3>
+<p data-para="220" data-cs="week-2-biological-regulation" data-cp="53">Start with one liter of water with electrolytes. Most of us do not get enough salt from pure electrolytes. You get fully hydrated and have way less cravings. Many times we think we are hungry when we are actually just dehydrated. Get around thirty grams of protein in the morning: eggs, meat, fish, greek yogurt, whatever works for you. Add healthy fats like avocado, nuts, and eggs. Minimize quick carbs by skipping the cereals, white bread, and processed sugars.</p>
+<p data-para="221" data-cs="week-2-biological-regulation" data-cp="54">If you do not feel like eating in the morning, do not force it. Fasting works for some, increasing BDNF and focus. For women, be aware that fasting can have negative hormonal effects, so research what works for your body.</p>
+<h3 data-para="222" data-cs="week-2-biological-regulation" data-cp="55">Caffeine Strategy</h3>
+<p data-para="223" data-cs="week-2-biological-regulation" data-cp="56">Wait sixty to ninety minutes after waking before your first coffee. Your natural waking system, cortisol and other chemicals, gets interrupted by caffeine. Let your body wake up naturally first. The afternoon crash becomes way less severe. Stop caffeine eight to twelve hours before bed. Have it after food when possible to protect your gut.</p>
+<h3 data-para="224" data-cs="week-2-biological-regulation" data-cp="57">Core Supplements</h3>
+<p data-para="225" data-cs="week-2-biological-regulation" data-cp="58">Based on the science and longevity research, I recommend these to everyone. Omega-3 at two to three grams is especially important for ADHD: brain function, inflammation, mood, focus. Magnesium at four hundred to six hundred milligrams supports over three hundred body processes. Creatine at five grams is proven to optimize brain power, muscle strength, recovery, and energy. Vitamin D3 at two thousand to five thousand IU supports mood, immune function, energy, and bone health. Do not take these dosages at face value. If you decide to go for supplements, research the right dosages for your situation.</p>
+<h3 data-para="226" data-cs="week-2-biological-regulation" data-cp="59">Managing Cravings</h3>
+<p data-para="227" data-cs="week-2-biological-regulation" data-cp="60">When cravings hit, try this sequence. First, drink a glass of water. Then have a protein snack. Then go for a five-minute walk. If you are still hungry after twenty minutes, eat mindfully. Many times after doing this, the cravings are already gone.</p>
+<figure class="section-image"><img src="images/week2_sections/w2_section_5_nutrition_the_fuel.png" alt="Nutrition: The Fuel" loading="lazy"></figure>
+<div class="section" id="tools-and-systems-33">
+<h2 data-para="228" data-cs="week-2-biological-regulation" data-cp="61">Tools and Systems</h2>
+<p data-para="229" data-cs="week-2-biological-regulation" data-cp="62">The external brain your ADHD needs.</p>
+<p data-para="230" data-cs="week-2-biological-regulation" data-cp="63">Knowing what to do is not the problem. Doing it consistently is. This is where ADHD brains need external systems. Willpower is not the answer. It might work for the first week or two because you can force it, but in the end it is about reducing friction and making the right choice the default.</p>
+<h3 data-para="231" data-cs="week-2-biological-regulation" data-cp="64">The Atomic Habits Framework</h3>
+<p data-para="232" data-cs="week-2-biological-regulation" data-cp="65">Make it obvious: Put your gym clothes by the bed, keep water visible, place supplements next to your coffee, put your phone in another room.</p>
+<p data-para="233" data-cs="week-2-biological-regulation" data-cp="66">Make it attractive: Stack habits with enjoyment. Podcast plus walk. Reward yourself after.</p>
+<p data-para="234" data-cs="week-2-biological-regulation" data-cp="67">Make it easy: Use the two-minute rule: just put on shoes, just start.</p>
+<p data-para="235" data-cs="week-2-biological-regulation" data-cp="68">Make it satisfying: Use a visual streak. Never miss twice. Celebrate the small wins.</p>
+<p data-para="236" data-cs="week-2-biological-regulation" data-cp="69">Habit stacking is particularly powerful: chain habits together so they flow automatically. Wake, then one liter of water, then five minutes of movement, then deep work. Attach new habits to existing anchors. Write the stack on your mirror. Externalize everything.</p>
+<h3 data-para="237" data-cs="week-2-biological-regulation" data-cp="70">Tracking: The Game-Changer</h3>
+<p data-para="238" data-cs="week-2-biological-regulation" data-cp="71">I recommend everyone get a tracker for at least a specific period. What to track: HRV (Heart Rate Variability) is basically a score for how regulated your nervous system is. Track strain to see if you pushed enough. Track recovery to know whether to go hard or rest. Track sleep quality, not just duration. Data removes guesswork. Your body is already talking. Tracking helps you hear it.</p>
+<h3 data-para="239" data-cs="week-2-biological-regulation" data-cp="72">Environment Design</h3>
+<p data-para="240" data-cs="week-2-biological-regulation" data-cp="73">When things are in their place, when you know where your gym clothes are, when you do not have to search through closets, everything becomes easier. Your phone charges in another room. Your gym bag is by the door. Healthy food is at eye level. Supplements are next to your coffee. Make the right choice the path of least resistance.</p>
+<blockquote data-para="241" data-cs="week-2-biological-regulation" data-cp="74"><p>You do not rise to the level of your goals. You fall to the level of your systems.</p><cite>— James Clear</cite></blockquote>
+<p data-para="242" data-cs="week-2-biological-regulation" data-cp="75">Share your First Domino in the community. What is the one thing you are fixing first: sleep, movement, or nutrition? Then at the end of this week, post one win, however small. Skipped caffeine after 2 PM? Got one extra hour of sleep? Walked for ten minutes? Post it. Small wins shared publicly become evidence that you are changing. And when someone else sees your win, it gives them permission to start small too.</p>
+<div class="community-action">
+<div class="community-action-label">Community Action</div>
+<div class="community-template-box" data-template="My First Domino: [sleep, movement, or nutrition]. Why this one: [what makes this your leverage point]. My one win this week, however small: [what you did].">
+<p>My First Domino: <span class="bracket">[sleep, movement, or nutrition]</span>. Why this one: <span class="bracket">[what makes this your leverage point]</span>. My one win this week, however small: <span class="bracket">[what you did]</span>.</p>
+<div class="copy-post-bar">
+<button class="btn-copy" onclick="copyTemplate(this)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg> Copy template</button>
+<a class="btn-post" href="https://www.skool.com/adhd?c=c065df53224b4a1691cdf5640ece9a6e" target="_blank" rel="noopener" onclick="copyTemplate(this.previousElementSibling)">Post in community →</a>
+</div>
+</div>
+</div>
+<figure class="section-image"><img src="images/week2_sections/w2_section_6_tools_and_systems.png" alt="Tools and Systems" loading="lazy"></figure>
+<section class="chapter week-chapter" id="week-3-emotional-mastery">
+<figure class="section-image"><img src="images/weeks/week_3.png" alt="Week 3: Emotional Mastery" loading="lazy"></figure>
+<h1 data-para="243">Week 3: Emotional Mastery</h1>
+<div class="ornament"></div>
+<p data-para="244" data-cs="week-3-emotional-mastery" data-cp="0">Master intense ADHD emotions so they fuel you instead of derail you.</p>
+<p data-para="245" data-cs="week-3-emotional-mastery" data-cp="1">Emotional intensity is a core trait of the ADHD nervous system. This can be a superpower, fueling passion and creativity. But it can also lead to Rejection Sensitive Dysphoria, chronic overwhelm, and intense frustration. This week is not about suppressing your emotions. It is about developing a comeback protocol, a reliable system to recover faster from stress and emotional spirals.</p>
+<div class="section" id="the-adhd-emotional-brain-34">
+<h2 data-para="246" data-cs="week-3-emotional-mastery" data-cp="2">The ADHD Emotional Brain</h2>
+<p data-para="247" data-cs="week-3-emotional-mastery" data-cp="3">Dr. Gabor Maté explains that emotional sensitivity is not a symptom of ADHD. It is central to what ADHD is. The same brain differences that create attention challenges also create heightened emotional responsiveness. You are not overly sensitive. You are appropriately sensitive for a brain that processes stimuli more intensely.</p>
+<blockquote data-para="248" data-cs="week-3-emotional-mastery" data-cp="4"><p>The ADHD mind is not one that lacks feelings. Quite the opposite. It is flooded with feelings that it struggles to contain and regulate.</p><cite>— Dr. Gabor Maté</cite></blockquote>
+<figure class="section-image"><img src="images/week3_sections/w3_section_1_the_adhd_emotional_brain.png" alt="The ADHD Emotional Brain" loading="lazy"></figure>
+<div class="section" id="thoughts-become-things-35">
+<h2 data-para="249" data-cs="week-3-emotional-mastery" data-cp="5">Thoughts Become Things</h2>
+<p data-para="250" data-cs="week-3-emotional-mastery" data-cp="6">Every thought you think produces a chemical reaction in the brain. That chemical cascades through your body as a feeling. The feeling influences your next thought. This creates your state of being, the combination of how you think and how you feel at any given moment. Your state of being drives your personality. Your personality creates your personal reality. This is not metaphor. It is neuroscience.</p>
+<blockquote data-para="251" data-cs="week-3-emotional-mastery" data-cp="7"><p>Your thoughts can literally make you sick. The fundamental question is: can your thoughts make you well?</p><cite>— Dr. Joe Dispenza</cite></blockquote>
+<p data-para="252" data-cs="week-3-emotional-mastery" data-cp="8">Here is where it gets interesting for the ADHD brain. You can become addicted to your own thoughts because stress hormones are addictive. If you can turn on the stress response by thought alone, replaying a difficult conversation, imagining future catastrophes, rehearsing your inadequacies, you can become chemically dependent on the very thoughts that make you miserable. This explains why negative thought patterns feel so sticky. It is not weakness. It is biochemistry.</p>
+<figure class="section-image"><img src="images/week3_sections/w3_section_2_thoughts_become_things.png" alt="Thoughts Become Things" loading="lazy"></figure>
+<div class="section" id="you-are-not-the-voice-in-your-head-36">
+<h2 data-para="253" data-cs="week-3-emotional-mastery" data-cp="9">You Are Not the Voice in Your Head</h2>
+<p data-para="254" data-cs="week-3-emotional-mastery" data-cp="10">Michael Singer describes this beautifully in The Untethered Soul. That constant stream of commentary, judgment, worry, and self-criticism is not you. It is just mental noise. You are the one who hears it. When you really start practicing this distinction, the mental chatter loses much of its power. You can observe a thought without believing it.</p>
+<blockquote data-para="255" data-cs="week-3-emotional-mastery" data-cp="11"><p>There is nothing more important to true growth than realizing that you are not the voice of the mind. You are the one who hears it.</p><cite>— Michael Singer</cite></blockquote>
+<p data-para="256" data-cs="week-3-emotional-mastery" data-cp="12">This shift from identification to observation is the foundation of all real change. As long as you believe you are your thoughts, you are trapped by them. The moment you realize you are the awareness behind the thoughts, you gain the freedom to choose which thoughts to follow and which to release.</p>
+<figure class="section-image"><img src="images/week3_sections/w3_section_3_you_are_not_the_voice_in_your_head.png" alt="You Are Not the Voice in Your Head" loading="lazy"></figure>
+<div class="section" id="the-only-moment-that-exists-37">
+<h2 data-para="257" data-cs="week-3-emotional-mastery" data-cp="13">The Only Moment That Exists</h2>
+<p data-para="258" data-cs="week-3-emotional-mastery" data-cp="14">The past is a memory. It does not exist anymore except in your mind. The future is a projection. It does not exist yet except in your imagination. The present moment is the only moment where change is actually possible. You cannot change a behavior in the past. You cannot change a behavior in the future. You can only make a different choice right now.</p>
+<p data-para="259" data-cs="week-3-emotional-mastery" data-cp="15">Eckhart Tolle&#x27;s Power of Now is not philosophy. It is the operating manual for breaking free from the thought loops that keep the ADHD brain trapped between what if and what was.</p>
+<figure class="section-image"><img src="images/week3_sections/w3_section_4_the_only_moment_that_exists.png" alt="The Only Moment That Exists" loading="lazy"></figure>
+<div class="section" id="the-circle-of-control-38">
+<h2 data-para="260" data-cs="week-3-emotional-mastery" data-cp="16">The Circle of Control</h2>
+<p data-para="261" data-cs="week-3-emotional-mastery" data-cp="17">Being present is powerful, but present to what? Not everything deserves your attention.</p>
+<p data-para="262" data-cs="week-3-emotional-mastery" data-cp="18">Inner circle (what you can control): How you handle challenges. Your self-talk. Where you allocate energy. Your goals and priorities. Your thoughts and actions. Your boundaries.</p>
+<p data-para="263" data-cs="week-3-emotional-mastery" data-cp="19">Outer circle (what you cannot control): The past. Future outcomes. Other people&#x27;s thoughts and actions. The news. The economy. What others think of you.</p>
+<p data-para="264" data-cs="week-3-emotional-mastery" data-cp="20">I barely read or watch any news. I decide what I focus on. The really important things, I still hear about. But I do not let media hijack my attention and emotions for things I cannot impact.</p>
+<blockquote data-para="265" data-cs="week-3-emotional-mastery" data-cp="21"><p>Where focus goes, energy flows.</p><cite>— Tony Robbins</cite></blockquote>
+<figure class="section-image"><img src="images/week3_sections/w3_section_5_the_circle_of_control.png" alt="The Circle of Control" loading="lazy"></figure>
+<div class="section" id="the-expectation-effect-39">
+<h2 data-para="266" data-cs="week-3-emotional-mastery" data-cp="22">The Expectation Effect</h2>
+<p data-para="267" data-cs="week-3-emotional-mastery" data-cp="23">What you focus on does not just consume your energy. It shapes your outcomes. David Robson&#x27;s research provides grounded, evidence-backed proof of this phenomenon. The placebo effect is just the beginning. But the nocebo effect is equally powerful: when people expect negative outcomes, those outcomes often manifest. Expectations create neural patterns that filter perception and guide behavior. When you expect to fail, you notice evidence of impending failure and miss evidence of potential success.</p>
+<figure class="section-image"><img src="images/week3_sections/w3_section_6_the_expectation_effect.png" alt="The Expectation Effect" loading="lazy"></figure>
+<div class="section" id="the-gratitude-gateway-40">
+<h2 data-para="268" data-cs="week-3-emotional-mastery" data-cp="24">The Gratitude Gateway</h2>
+<p data-para="269" data-cs="week-3-emotional-mastery" data-cp="25">If expectations shape experience, then shifting your emotional state is not just nice. It is strategic. Gratitude is the ultimate state of receiving. It signals to the body that something wonderful is happening or has happened. The physiological effects are measurable: the heart beats more coherently, oxytocin releases, and research shows practicing gratitude increases IgA, a key immune marker, by fifty percent in just four days.</p>
+<p data-para="270" data-cs="week-3-emotional-mastery" data-cp="26">But here is the deeper insight: do not just feel grateful for what you have. Feel grateful for things you have not received yet. This programs your autonomic nervous system for creation rather than lack.</p>
+<blockquote data-para="271" data-cs="week-3-emotional-mastery" data-cp="27"><p>We only accept, believe, and surrender to thoughts that are equal to our emotional state.</p><cite>— Dr. Joe Dispenza</cite></blockquote>
+<figure class="section-image"><img src="images/week3_sections/w3_section_7_the_gratitude_gateway.png" alt="The Gratitude Gateway" loading="lazy"></figure>
+<div class="section" id="the-three-minute-comeback-protocol-41">
+<h2 data-para="272" data-cs="week-3-emotional-mastery" data-cp="28">The Three-Minute Comeback Protocol</h2>
+<p data-para="273" data-cs="week-3-emotional-mastery" data-cp="29">Understanding the mechanism is one thing. But what do you actually do when you are already spiraling? When the emotions have already hijacked you and theory feels useless?</p>
+<p data-para="274" data-cs="week-3-emotional-mastery" data-cp="30">Step 1: What am I feeling right now? Give the emotion a name. Overwhelm? Frustration? Shame? Anxiety? Naming it reduces its power.</p>
+<p data-para="275" data-cs="week-3-emotional-mastery" data-cp="31">Step 2: Where is this coming from? Identify the trigger. Was it a specific comment, a threatening situation, or a negative thought pattern? If you are stuck, drop into your body: where are you feeling this physically? Place your hand there. Breathe.</p>
+<p data-para="276" data-cs="week-3-emotional-mastery" data-cp="32">Step 3: What is the smallest next action? Define one tiny, physical step you can take to move forward. Take a walk around the block. Send the one-sentence message. Step outside for fresh air.</p>
+<blockquote data-para="277" data-cs="week-3-emotional-mastery" data-cp="33"><p>The goal is not to never spiral. It is to spiral less often, less deep, and for less time. Speed of recovery, not perfection of performance.</p><cite>— Jim Ebbelaar</cite></blockquote>
+<figure class="section-image"><img src="images/week3_sections/w3_section_8_the_three-minute_comeback_protocol.png" alt="The Three-Minute Comeback Protocol" loading="lazy"></figure>
+<div class="section" id="overcoming-procrastination-s-emotional-blocks-42">
+<h2 data-para="278" data-cs="week-3-emotional-mastery" data-cp="34">Overcoming Procrastination&#x27;s Emotional Blocks</h2>
+<p data-para="279" data-cs="week-3-emotional-mastery" data-cp="35">Procrastination is rarely laziness. It is most often a strategy of emotional avoidance. We delay tasks not because we cannot do them, but because we want to avoid the negative feelings we associate with them. The diagnosis is usually one of three problems.</p>
+<p data-para="280" data-cs="week-3-emotional-mastery" data-cp="36">Energy problem: You are depleted. The solution is rest, movement, or a dopamine reset.</p>
+<p data-para="281" data-cs="week-3-emotional-mastery" data-cp="37">Clarity problem: The task is too vague. Break it down until the next action is obvious.</p>
+<p data-para="282" data-cs="week-3-emotional-mastery" data-cp="38">Emotional problem: Fear, shame, or anxiety is attached to the task. Address the emotion directly.</p>
+<figure class="section-image"><img src="images/week3_sections/w3_section_9_overcoming_procrastinations_emotional_blocks.png" alt="Overcoming Procrastination&#x27;s Emotional Blocks" loading="lazy"></figure>
+<div class="section" id="mental-rehearsal-training-the-future-43">
+<h2 data-para="283" data-cs="week-3-emotional-mastery" data-cp="39">Mental Rehearsal: Training the Future</h2>
+<p data-para="284" data-cs="week-3-emotional-mastery" data-cp="40">Research has proven something remarkable: the brain cannot fully distinguish between a real experience and one vividly imagined. People who mentally rehearsed playing piano scales for five days developed the same brain changes as those who physically practiced. If you can mentally rehearse how you want to respond in challenging situations, really feel the emotions, really inhabit the new behavior, you are literally rewiring your brain.</p>
+<blockquote data-para="285" data-cs="week-3-emotional-mastery" data-cp="41"><p>Before I do anything important, I run it in my mind first. I see the meeting going well, the conversation flowing, the outcome I want. By the time I actually do it, my brain has already practiced success.</p><cite>— Jim Ebbelaar</cite></blockquote>
+<figure class="section-image"><img src="images/week3_sections/w3_section_10_mental_rehearsal.png" alt="Mental Rehearsal: Training the Future" loading="lazy"></figure>
+<div class="section" id="self-regulation-the-master-skill-44">
+<h2 data-para="286" data-cs="week-3-emotional-mastery" data-cp="42">Self-Regulation: The Master Skill</h2>
+<p data-para="287" data-cs="week-3-emotional-mastery" data-cp="43">Everything in this week points to one master skill: self-regulation. The ability to change your internal state in conditions that would normally trigger automatic responses. First, you practice it with eyes closed, in meditation. Then standing up. Then with eyes open. Then in challenging real-world situations. When you notice yourself falling out of coherence, pause, breathe, relax into the heart, return to the present moment. Do this enough times and it becomes automatic.</p>
+<blockquote data-para="288" data-cs="week-3-emotional-mastery" data-cp="44"><p>Being able to regulate your emotional state in the same environment, to think, act, and feel differently in the same conditions, that is regulation.</p><cite>— Dr. Joe Dispenza</cite></blockquote>
+<p data-para="289" data-cs="week-3-emotional-mastery" data-cp="45">The goal is not to feel good all the time. The goal is to come back faster. To shorten the time between falling and rising. To make the comeback so practiced that it becomes your default response to difficulty.</p>
+<p data-para="290" data-cs="week-3-emotional-mastery" data-cp="46">Name one pattern you noticed this week and post it in the community. A thought loop, a trigger, an emotional habit. This is vulnerable. That is the point. You will find dozens of people who recognized the same pattern in themselves but never had the words for it. When you name it publicly, it loses power over you. And you give others permission to name theirs.</p>
+<div class="community-action">
+<div class="community-action-label">Community Action</div>
+<div class="community-template-box" data-template="The pattern I noticed this week: [a thought loop, a trigger, or an emotional habit you recognized]. What changed when I named it: [how it felt to see it clearly, what shifted].">
+<p>The pattern I noticed this week: <span class="bracket">[a thought loop, a trigger, or an emotional habit you recognized]</span>. What changed when I named it: <span class="bracket">[how it felt to see it clearly, what shifted]</span>.</p>
+<div class="copy-post-bar">
+<button class="btn-copy" onclick="copyTemplate(this)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg> Copy template</button>
+<a class="btn-post" href="https://www.skool.com/adhd?c=c065df53224b4a1691cdf5640ece9a6e" target="_blank" rel="noopener" onclick="copyTemplate(this.previousElementSibling)">Post in community →</a>
+</div>
+</div>
+</div>
+<figure class="section-image"><img src="images/week3_sections/w3_section_11_self-regulation_the_master_skill.png" alt="Self-Regulation: The Master Skill" loading="lazy"></figure>
+<section class="chapter week-chapter" id="week-4-identity-transformation">
+<figure class="section-image"><img src="images/weeks/week_4.png" alt="Week 4: Identity Transformation" loading="lazy"></figure>
+<h1 data-para="291">Week 4: Identity Transformation</h1>
+<div class="ornament"></div>
+<p data-para="292" data-cs="week-4-identity-transformation" data-cp="0">Bridge the gap between who you are and who you are becoming.</p>
+<p data-para="293" data-cs="week-4-identity-transformation" data-cp="1">This week, you will build the bridge between your current reality and your future aspirations. There is often a significant gap between the current self, defined by past patterns and limiting beliefs, and the future self, the version of you who is capable of achieving your most ambitious goals.</p>
+<div class="section" id="inside-out-transformation-45">
+<h2 data-para="294" data-cs="week-4-identity-transformation" data-cp="2">Inside-Out Transformation</h2>
+<p data-para="295" data-cs="week-4-identity-transformation" data-cp="3">We live in a culture obsessed with external solutions. New productivity apps. Better morning routines. The right supplements. The perfect system. We believe that if we can just find the right external change, the internal shift will follow. This approach has it exactly backwards.</p>
+<p data-para="296" data-cs="week-4-identity-transformation" data-cp="4">The cycle that keeps most people stuck looks like this: the same thoughts lead to the same choices, which produce the same behaviors, which create the same experiences, which generate the same emotions, which reinforce the same thoughts. You cannot break this cycle by changing your circumstances. You can only break it by changing yourself first.</p>
+<blockquote data-para="297" data-cs="week-4-identity-transformation" data-cp="5"><p>The body has become addicted to familiar emotional states, even negative ones. The discomfort of uncertainty feels worse than the familiarity of suffering.</p><cite>— Dr. Joe Dispenza</cite></blockquote>
+<p data-para="298" data-cs="week-4-identity-transformation" data-cp="6">This is why people can win the lottery and end up broke, or lose everything and rebuild to greater heights. External circumstances are temporary. Internal identity is persistent. Your life will always reorganize itself to match your self-concept.</p>
+<figure class="section-image"><img src="images/week4_sections/w4_section_1_inside-out_transformation.png" alt="Inside-Out Transformation" loading="lazy"></figure>
+<div class="section" id="the-three-barriers-to-change-46">
+<h2 data-para="299" data-cs="week-4-identity-transformation" data-cp="7">The Three Barriers to Change</h2>
+<p data-para="300" data-cs="week-4-identity-transformation" data-cp="8">Your body has been conditioned emotionally into the past. Every cell carries chemical memories of who you have been. When you try to change, the body sends signals demanding those familiar chemicals, even if they come from stress, anxiety, or self-doubt. Change feels physically uncomfortable because you are going through a kind of withdrawal.</p>
+<p data-para="301" data-cs="week-4-identity-transformation" data-cp="9">Your environment, where every person, place, and thing has a neurological network triggering familiar responses. Your bedroom, your commute, your colleagues have all become cues that activate the old version of you. This is why travel can feel so liberating: you temporarily escape the environmental triggers that keep you stuck.</p>
+<p data-para="302" data-cs="week-4-identity-transformation" data-cp="10">Time, the trap of being caught between the familiar past and the predictable future. We spend our days mentally rehearsing yesterday&#x27;s problems and tomorrow&#x27;s anxieties, leaving no space for the present moment where change actually lives.</p>
+<figure class="section-image"><img src="images/week4_sections/w4_section_2_the_three_barriers_to_change.png" alt="The Three Barriers to Change" loading="lazy"></figure>
+<div class="section" id="the-self-image-revolution-47">
+<h2 data-para="303" data-cs="week-4-identity-transformation" data-cp="11">The Self-Image Revolution</h2>
+<p data-para="304" data-cs="week-4-identity-transformation" data-cp="12">Maxwell Maltz, the plastic surgeon who wrote Psycho-Cybernetics, discovered something profound through his patients. He would perform successful surgeries, objectively improving someone&#x27;s appearance, yet the patient would still see themselves as ugly. The surgery changed their face but not their self-image. And it was the self-image, not the face, that determined how they moved through the world.</p>
+<blockquote data-para="305" data-cs="week-4-identity-transformation" data-cp="13"><p>Self-image sets the boundaries of individual accomplishment. It defines what you can and cannot do. Expand the self-image and you expand the area of the possible.</p><cite>— Maxwell Maltz</cite></blockquote>
+<figure class="section-image"><img src="images/week4_sections/w4_section_3_the_self-image_revolution.png" alt="The Self-Image Revolution" loading="lazy"></figure>
+<div class="section" id="the-survival-identity-map-48">
+<h2 data-para="306" data-cs="week-4-identity-transformation" data-cp="14">The Survival Identity Map</h2>
+<p data-para="307" data-cs="week-4-identity-transformation" data-cp="15">Before you can build a new self-image, you need to understand the one you are currently operating from. We all develop survival strategies early in life, ways of being that protected us but may no longer serve us.</p>
+<p data-para="308" data-cs="week-4-identity-transformation" data-cp="16">The Pleaser who is always nice learned that approval meant safety.</p>
+<p data-para="309" data-cs="week-4-identity-transformation" data-cp="17">The Overachiever who is always useful learned that productivity meant love.</p>
+<p data-para="310" data-cs="week-4-identity-transformation" data-cp="18">The Avoider who always says tomorrow learned that not trying meant not failing.</p>
+<p data-para="311" data-cs="week-4-identity-transformation" data-cp="19">The Class Clown who makes everyone laugh learned that humor deflected judgment.</p>
+<p data-para="312" data-cs="week-4-identity-transformation" data-cp="20">Maybe you recognize yourself in one of these. If you are anything like me, you have worn them all, just at different times. It started with the Class Clown, when I landed in VMBO and hid behind jokes. Then the Pleaser in my first relationships, bending myself into whatever shape I thought the other person needed. Then the Avoider, head in the sand, not even trying. And finally the Overachiever, the mask I still catch myself wearing today, the one that whispers: if you just do more, build more, achieve more, then you will finally be enough.</p>
+<p data-para="313" data-cs="week-4-identity-transformation" data-cp="21">The difference now is not that the masks are gone. It is that I can see them. And seeing them is the first step to choosing something different.</p>
+<blockquote data-para="314" data-cs="week-4-identity-transformation" data-cp="22"><p>Ask yourself: who did I become to stay safe? Then ask: who do I want to become to feel alive? The gap between these answers is your transformation roadmap.</p><cite>— Jim Ebbelaar</cite></blockquote>
+<figure class="section-image"><img src="images/week4_sections/w4_section_4_the_survival_identity_map.png" alt="The Survival Identity Map" loading="lazy"></figure>
+<div class="section" id="the-self-sabotage-pattern-49">
+<h2 data-para="315" data-cs="week-4-identity-transformation" data-cp="23">The Self-Sabotage Pattern</h2>
+<p data-para="316" data-cs="week-4-identity-transformation" data-cp="24">As you begin this identity work, your old identity will fight back. And it will not fight fair. You have a good stretch, maybe a day, maybe a week. You are following your protocols, sleeping better, showing up differently. And then a voice appears. Not loud, but seductive. A whisper that says: you have done such a good job. You deserve a break. Just this once. And then the old patterns rush back in.</p>
+<p data-para="317" data-cs="week-4-identity-transformation" data-cp="25">This is not laziness. This is your nervous system doing exactly what it is designed to do: returning you to your familiar state. Your body does not care if your familiar state is healthy or unhealthy. It only cares that it is familiar.</p>
+<blockquote data-para="318" data-cs="week-4-identity-transformation" data-cp="26"><p>The body has been conditioned to a familiar emotional state. When you try to change, it sends every signal it can to pull you back, not because the old state was good, but because it was known.</p><cite>— Dr. Joe Dispenza</cite></blockquote>
+<p data-para="319" data-cs="week-4-identity-transformation" data-cp="27">If you recognize this pattern in yourself, know that it is not a character flaw. It is a survival program. And like all programs, it can be rewritten. That is what this week is about.</p>
+<figure class="section-image"><img src="images/week4_sections/w4_section_5_the_self-sabotage_pattern.png" alt="The Self-Sabotage Pattern" loading="lazy"></figure>
+<div class="section" id="the-stories-we-carry-50">
+<h2 data-para="320" data-cs="week-4-identity-transformation" data-cp="28">The Stories We Carry</h2>
+<p data-para="321" data-cs="week-4-identity-transformation" data-cp="29">Your survival identity did not just create behaviors. It created stories. Research suggests that fifty percent of the traumatic stories we tell ourselves are no longer the truth, if they ever were. We embellish to excuse ourselves from changing.</p>
+<p data-para="322" data-cs="week-4-identity-transformation" data-cp="30">The shift is this: stop romancing your past. Start romancing your future. Stop believing in your past and start believing in what is possible. This is not denial. It is direction. The past informs you. The future transforms you.</p>
+<blockquote data-para="323" data-cs="week-4-identity-transformation" data-cp="31"><p>The memory without the emotional charge is called wisdom. Now you no longer belong to the past. You are ready to create a new future.</p><cite>— Dr. Joe Dispenza</cite></blockquote>
+<figure class="section-image"><img src="images/week4_sections/w4_section_6_the_stories_we_carry.png" alt="The Stories We Carry" loading="lazy"></figure>
+<div class="section" id="the-mirror-principle-51">
+<h2 data-para="324" data-cs="week-4-identity-transformation" data-cp="32">The Mirror Principle</h2>
+<p data-para="325" data-cs="week-4-identity-transformation" data-cp="33">As you shift your internal stories, your external reality starts to shift too. Your life is a mirror. The relationships you attract, the opportunities that find you, the obstacles that appear are all reflections of your internal state. When you operate from fear, you make fearful decisions. When you operate from wholeness, you make confident decisions. You see opportunities where others see problems. You attract rather than chase.</p>
+<blockquote data-para="326" data-cs="week-4-identity-transformation" data-cp="34"><p>When you are whole, it is hard to want. You can only want when you are in lack. The real goal is not the car, relationship, or health outcome. It is wholeness itself.</p><cite>— Naval Ravikant</cite></blockquote>
+<figure class="section-image"><img src="images/week4_sections/w4_section_7_the_mirror_principle.png" alt="The Mirror Principle" loading="lazy"></figure>
+<div class="section" id="finding-your-right-difficult-52">
+<h2 data-para="327" data-cs="week-4-identity-transformation" data-cp="35">Finding Your Right Difficult</h2>
+<p data-para="328" data-cs="week-4-identity-transformation" data-cp="36">Hallowell and Ratey introduce a concept called the right difficult. The ADHD brain does not struggle with difficult tasks in general. It struggles with the wrong kind of difficult. Tasks that are boring, routine, and unrewarding feel impossible. Tasks that are challenging, novel, and meaningful can capture ADHD focus for hours. The goal is not to make everything easy. It is to find the challenges that energize rather than drain you.</p>
+<blockquote data-para="329" data-cs="week-4-identity-transformation" data-cp="37"><p>Most people with ADHD have something they can do as well as or better than anyone else. The key is finding that something and building your life around it.</p><cite>— Dr. Edward Hallowell</cite></blockquote>
+<figure class="section-image"><img src="images/week4_sections/w4_section_8_finding_your_right_difficult.png" alt="Finding Your Right Difficult" loading="lazy"></figure>
+<div class="section" id="your-life-s-task-53">
+<h2 data-para="330" data-cs="week-4-identity-transformation" data-cp="38">Your Life&#x27;s Task</h2>
+<p data-para="331" data-cs="week-4-identity-transformation" data-cp="39">Robert Greene&#x27;s research in Mastery reveals that your Life&#x27;s Task often leaves clues early on, in what you were naturally drawn to before the world told you what was useful. When I read this book during my darkest period, I suddenly saw the pattern I had missed. The gaming was not wasted time. It taught me systems thinking and optimization. The e-commerce failure taught me marketing and customer psychology. The consulting work taught me how organizations function.</p>
+<blockquote data-para="332" data-cs="week-4-identity-transformation" data-cp="40"><p>Mastery taught me that nothing in my life had been wasted. Every scattered interest, every failed project, every tangent, they were all puzzle pieces. The pattern was always there. I just could not see it until I looked.</p><cite>— Jim Ebbelaar</cite></blockquote>
+<figure class="section-image"><img src="images/week4_sections/w4_section_9_your_lifes_task.png" alt="Your Life&#x27;s Task" loading="lazy"></figure>
+<div class="section" id="remembering-who-you-are-54">
+<h2 data-para="333" data-cs="week-4-identity-transformation" data-cp="41">Remembering Who You Are</h2>
+<p data-para="334" data-cs="week-4-identity-transformation" data-cp="42">Transformation is not about becoming someone new. It is about remembering who you were before the world told you who to be. This thread runs through every wisdom tradition humanity has ever produced. The message is always the same: you arrived whole. Life made you forget. The work is to remember.</p>
+<p data-para="335" data-cs="week-4-identity-transformation" data-cp="43">Before the labels, before the survival masks, there was a version of you that was already complete. A kid who was curious without needing permission. Who was creative without calling it a skill. Who followed their interests without asking if they were useful. That version did not need to be fixed. They needed to be protected. And in most cases, they were not, not because anyone was cruel, but because the world simply was not built for the way their mind worked.</p>
+<blockquote data-para="336" data-cs="week-4-identity-transformation" data-cp="44"><p>We are not here to become something we are not. We are here to remember what we have always been, underneath the conditioning, underneath the masks, underneath the stories we were told about who we should be.</p><cite>— Jim Ebbelaar</cite></blockquote>
+<figure class="section-image"><img src="images/week4_sections/w4_section_10_remembering_who_you_are.png" alt="Remembering Who You Are" loading="lazy"></figure>
+<div class="section" id="two-lenses-for-self-understanding-55">
+<h2 data-para="337" data-cs="week-4-identity-transformation" data-cp="45">Two Lenses for Self-Understanding</h2>
+<h3 data-para="338" data-cs="week-4-identity-transformation" data-cp="46">MBTI: How You Have Adapted</h3>
+<p data-para="339" data-cs="week-4-identity-transformation" data-cp="47">The Myers-Briggs Type Indicator maps your cognitive preferences across four dimensions. The important thing to understand: MBTI is not a fixed label. It is a snapshot of how you are currently operating, and that changes. My own MBTI type has shifted over the years. It captures the software you are currently running, the adaptation, not the essence.</p>
+<p data-para="340" data-cs="week-4-identity-transformation" data-cp="48">For ADHD minds, MBTI is particularly useful for understanding your relationship with structure. If you are a strong Perceiver, rigid systems will always feel like a cage. You need flexibility baked into your operating system. If you are a strong Intuitive, you will naturally see big-picture connections but might struggle with sequential details.</p>
+<h3 data-para="341" data-cs="week-4-identity-transformation" data-cp="49">Human Design: How You Were Built</h3>
+<p data-para="342" data-cs="week-4-identity-transformation" data-cp="50">If MBTI captures how you have adapted, Human Design claims to capture how you were designed to operate before any adaptation happened. Your chart is calculated from your birth data and stays the same for life. It gives you your type: Generator, Manifesting Generator, Projector, Manifestor, or Reflector, each with a fundamentally different strategy for making decisions, using energy, and navigating the world.</p>
+<p data-para="343" data-cs="week-4-identity-transformation" data-cp="51">You might read your Human Design chart and feel an immediate recognition, a deep yes, that is how I have always felt but never had words for. That is the remembering. That is the signal underneath the noise.</p>
+<blockquote data-para="344" data-cs="week-4-identity-transformation" data-cp="52"><p>You were not born wrong. You were born with a design. The suffering comes from living someone else&#x27;s design instead of your own.</p><cite>— Jim Ebbelaar</cite></blockquote>
+<h3 data-para="345" data-cs="week-4-identity-transformation" data-cp="53">Why Use Both</h3>
+<p data-para="346" data-cs="week-4-identity-transformation" data-cp="54">Together, these tools create something neither can offer alone. MBTI shows you how life has shaped you. Human Design shows you the hardware you were born with. When you hold both together, you can see where your current behavior aligns with your design and where it does not. That gap is your transformation roadmap.</p>
+<figure class="section-image"><img src="images/week4_sections/w4_section_11_two_lenses_for_self-understanding.png" alt="Two Lenses for Self-Understanding" loading="lazy"></figure>
+<div class="section" id="identity-based-change-56">
+<h2 data-para="347" data-cs="week-4-identity-transformation" data-cp="55">Identity-Based Change</h2>
+<p data-para="348" data-cs="week-4-identity-transformation" data-cp="56">James Clear distinguishes between three layers of behavior change: outcome-based (I want to lose weight), process-based (I will go to the gym three times a week), and identity-based (I am someone who takes care of my body). Most people work from outcome to identity. The most effective change works from identity to outcome.</p>
+<blockquote data-para="349" data-cs="week-4-identity-transformation" data-cp="57"><p>The goal is not to read a book. It is to become a reader. Not to run a marathon, but to become a runner.</p><cite>— James Clear</cite></blockquote>
+<p data-para="350" data-cs="week-4-identity-transformation" data-cp="58">Every action you take is a vote for the type of person you wish to become. Remember the protocols from the previous weeks? Those are not just health habits. They are identity votes. Every time you follow your bare minimum, even on your worst day, you are casting a vote: I am someone who keeps promises to himself.</p>
+<figure class="section-image"><img src="images/week4_sections/w4_section_12_identity-based_change.png" alt="Identity-Based Change" loading="lazy"></figure>
+<div class="section" id="designing-your-future-self-57">
+<h2 data-para="351" data-cs="week-4-identity-transformation" data-cp="59">Designing Your Future Self</h2>
+<p data-para="352" data-cs="week-4-identity-transformation" data-cp="60">With all of this understanding in place, it is time to get specific. What limiting beliefs has your future self overcome? What new beliefs have replaced them? What does a typical day look like for this person? What does this person say no to? How does your future self handle the same triggers that derail your current self? How does your future self work with their MBTI preferences and Human Design?</p>
+<p data-para="353" data-cs="week-4-identity-transformation" data-cp="61">Spend real time on this. Write it down. Be specific. The more vivid and detailed your vision, the more your brain can rehearse it. Remember: you are not inventing someone from nothing. You are designing the clearest expression of who you already are.</p>
+<figure class="section-image"><img src="images/week4_sections/w4_section_13_designing_your_future_self.png" alt="Designing Your Future Self" loading="lazy"></figure>
+<div class="section" id="somatic-breathwork-ceremony-58">
+<h2 data-para="354" data-cs="week-4-identity-transformation" data-cp="62">Somatic Breathwork Ceremony</h2>
+<p data-para="355" data-cs="week-4-identity-transformation" data-cp="63">This week, the full ADHD Harmony program includes a guided somatic breathwork ceremony, and it may be  the most powerful experience in this entire journey. Breathwork bypasses the thinking mind. It forces you inward, into your body and emotions, instead of staying stuck in your head. What years of therapy can do, breathwork can unlock in a single session.</p>
+<p data-para="356" data-cs="week-4-identity-transformation" data-cp="64">Here is how to prepare so you are ready. No heavy meal two to three hours before, ideally do it fasted. Minimal or no caffeine that day. Find a quiet, safe space where you can lie down without interruptions. Good headphones. Water nearby. Tissues, because you may cry. Clear schedule afterward to integrate. And set an intention before you begin: what survival identity are you ready to let go of? What part of your original self are you ready to remember?</p>
+<p data-para="357" data-cs="week-4-identity-transformation" data-cp="65">Please note: if you are pregnant, have cardiovascular conditions, a history of seizures, high blood pressure, or major psychotic conditions, breathe at forty to fifty percent intensity and stop whenever needed.</p>
+<p data-para="358" data-cs="week-4-identity-transformation" data-cp="66">Describe your future self in one paragraph and share it in the community. Be specific. Not vague aspirations. Paint the picture. What does a Tuesday morning look like? How do you feel when you wake up? What have you built? When others read your vision, it becomes more real for both of you. And when your future self feels real, your present self starts making different choices.</p>
+<div class="community-action">
+<div class="community-action-label">Community Action</div>
+<div class="community-template-box" data-template="My Future Self: It is a Tuesday morning. [Describe what you see. How do you feel when you wake up? What does your morning look like? What have you built? Be specific, not vague.]">
+<p>My Future Self: It is a Tuesday morning. <span class="bracket">[Describe what you see. How do you feel when you wake up? What does your morning look like? What have you built? Be specific, not vague.]</span></p>
+<div class="copy-post-bar">
+<button class="btn-copy" onclick="copyTemplate(this)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg> Copy template</button>
+<a class="btn-post" href="https://www.skool.com/adhd?c=c065df53224b4a1691cdf5640ece9a6e" target="_blank" rel="noopener" onclick="copyTemplate(this.previousElementSibling)">Post in community →</a>
+</div>
+</div>
+</div>
+<figure class="section-image"><img src="images/week4_sections/w4_section_14_somatic_breathwork_ceremony.png" alt="Somatic Breathwork Ceremony" loading="lazy"></figure>
+<section class="chapter week-chapter" id="week-5-productivity-and-environment">
+<figure class="section-image"><img src="images/weeks/week_5.png" alt="Week 5: Productivity and Environment" loading="lazy"></figure>
+<h1 data-para="359">Week 5: Productivity and Environment</h1>
+<div class="ornament"></div>
+<p data-para="360" data-cs="week-5-productivity-and-environment" data-cp="0">Systems that work with your brain, not against it.</p>
+<p data-para="361" data-cs="week-5-productivity-and-environment" data-cp="1">If you have made it to week five, something remarkable has already happened. You are still here. In an ADHD program, where most people tap out around week two, you are showing up. That alone is worth celebrating.</p>
+<p data-para="362" data-cs="week-5-productivity-and-environment" data-cp="2">This is not your typical productivity chapter. I am not going to hand you a color-coded calendar system and tell you to time-block your life into fifteen-minute segments. I am not going to pretend that discipline is the answer. What I have learned is that real productivity for the ADHD brain looks nothing like what the self-help world sells. It is about finding something that lights you up so much that working on it becomes natural. It is about designing systems that match your wiring. And it is about understanding that the external architecture of your life matters just as much as the internal transformation we have been doing.</p>
+<div class="section" id="the-harmony-productivity-system-59">
+<h2 data-para="363" data-cs="week-5-productivity-and-environment" data-cp="3">The Harmony Productivity System</h2>
+<p data-para="364" data-cs="week-5-productivity-and-environment" data-cp="4">Over the past several years, I have developed a six-step framework that captures everything I know about what actually makes the ADHD brain productive. Think of it less as a staircase and more as a system, with different parts needing attention at different times.</p>
+<h3 data-para="365" data-cs="week-5-productivity-and-environment" data-cp="5">Step One: Regulate Your Nervous System</h3>
+<p data-para="366" data-cs="week-5-productivity-and-environment" data-cp="6">This is why we did not start this program with productivity advice. We started with biology, emotions, and identity, because without that foundation, no productivity system in the world will save you. You can have the most elegant task management system ever built, but if you slept for three hours last night, it is completely worthless. The reason most productivity advice fails for ADHD brains is not that the advice is wrong. It is that it is being applied to a system that is not regulated enough to use it.</p>
+<h3 data-para="367" data-cs="week-5-productivity-and-environment" data-cp="7">Step Two: Find Your Purpose</h3>
+<p data-para="368" data-cs="week-5-productivity-and-environment" data-cp="8">Since I really spent time discovering what lights me up and what I feel I am here to do, productivity has almost stopped being an issue. I can work twelve-hour days without forcing myself. The struggle to be productive dissolved. Not because I found the perfect app, but because I found work that feels like my mission. When your work is deeply aligned with who you are, motivation becomes organic.</p>
+<p data-para="369" data-cs="week-5-productivity-and-environment" data-cp="9">This week&#x27;s worksheet centers on the Ikigai framework, the Japanese concept of finding the intersection between what you love, what you are good at, what the world needs, and what you can be paid for.</p>
+<p data-para="370" data-cs="week-5-productivity-and-environment" data-cp="10">A question I get constantly: I have this thing that lights me up, but it does not make money yet. My philosophy is about balancing purpose and profit. You may need to keep doing things that do not fully excite you right now. But the shift happens when you understand why you are doing those things and how they serve as a bridge to where you actually want to be.</p>
+<h3 data-para="371" data-cs="week-5-productivity-and-environment" data-cp="11">Step Three: Define Your Goals</h3>
+<p data-para="372" data-cs="week-5-productivity-and-environment" data-cp="12">You should already have your Big Rocks from week one. But defining goals is not a one-time event. A powerful tactic is to write down everything you want across every dimension of your life. Then ask yourself: what am I going to remove or park? This is where your Someday List becomes essential. Once an idea is written down, it is out of your head. You are no longer burning working memory to hold onto it. Think of your working memory like RAM in a computer. Every unwritten idea takes up processing power. Externalize it, and you free that power for the two or three Big Rocks you are actually focusing on.</p>
+<h3 data-para="373" data-cs="week-5-productivity-and-environment" data-cp="13">Step Four: Decide on the Approach</h3>
+<p data-para="374" data-cs="week-5-productivity-and-environment" data-cp="14">A decision-making framework for the overthinking brain.</p>
+<p data-para="375" data-cs="week-5-productivity-and-environment" data-cp="15">Filter 1: Is it easily reversible? Most decisions we agonize over are easy to reverse. If so, just pick something and start. You learn more from action than deliberation.</p>
+<p data-para="376" data-cs="week-5-productivity-and-environment" data-cp="16">Filter 2: Is the answer a clear yes? If the answer is not an obvious yes, it should probably be a no. A real yes feels obvious, easy. The doubt itself is information.</p>
+<p data-para="377" data-cs="week-5-productivity-and-environment" data-cp="17">Filter 3: Short-term pain, long-term gain? Nine times out of ten, the option that feels harder in the short term is the one that makes you better in the long run.</p>
+<p data-para="378" data-cs="week-5-productivity-and-environment" data-cp="18">Filter 4: Is it aligned? For truly life-changing decisions, ask: is one option clearly more aligned with my top values, my Big Rocks, or the identity I am stepping into?</p>
+<h3 data-para="379" data-cs="week-5-productivity-and-environment" data-cp="19">Step Five: Execute</h3>
+<p data-para="380" data-cs="week-5-productivity-and-environment" data-cp="20">Breaking through the wall between knowing and doing.</p>
+<p data-para="381" data-cs="week-5-productivity-and-environment" data-cp="21">When you are stuck, first diagnose the blocker. Is it an energy problem, a clarity problem, or an emotional problem? Each requires a completely different intervention.</p>
+<p data-para="382" data-cs="week-5-productivity-and-environment" data-cp="22">Shrink the task. The ADHD brain looks at a massive project and freezes. Break it down until the first step is so small it feels ridiculous. Commit to just five minutes. What actually happens most of the time is that once you start, the resistance dissolves.</p>
+<p data-para="383" data-cs="week-5-productivity-and-environment" data-cp="23">The Spark Method (NICE). When your brain will not engage, use the four dopamine triggers: Novelty (find a new way to do it), Interest (connect it to something you care about), Challenge (gamify it, compete with yourself), and Emergency (create real urgency, like a public commitment).</p>
+<p data-para="384" data-cs="week-5-productivity-and-environment" data-cp="24">Reframe the story. Sometimes procrastination hides behind fear. If I do not start, I cannot fail. Surface the fear, name it, and define what good enough means for your first attempt.</p>
+<h3 data-para="385" data-cs="week-5-productivity-and-environment" data-cp="25">Step Six: Pick and Stick</h3>
+<p data-para="386" data-cs="week-5-productivity-and-environment" data-cp="26">The art of not starting over.</p>
+<p data-para="387" data-cs="week-5-productivity-and-environment" data-cp="27">This might be the most important step of all. Focus compounds exponentially. When your energy, attention, and time are scattered across five goals, each gets a thin sliver. When you consolidate that same energy into one or two priorities, the impact is massive.</p>
+<h3 data-para="388" data-cs="week-5-productivity-and-environment" data-cp="28">The Mirage</h3>
+<p data-para="389" data-cs="week-5-productivity-and-environment" data-cp="29">There is a pattern I have watched play out in my own life and in the lives of nearly every person with ADHD I have worked with. We get a new idea. We are hyped. Dopamine floods in. We go all in. But then the novelty wears off. The excitement dries up. The results have not arrived yet. And you find yourself in a kind of desert, walking between the dopamine of starting and the dopamine of results, with nothing but dry road in between.</p>
+<p data-para="390" data-cs="week-5-productivity-and-environment" data-cp="30">This is where The Mirage appears. Right when the work feels hardest and the progress feels invisible, a shiny new idea shows up on the horizon. A new business model. A new workout plan. A new project that feels full of possibility. It looks exactly like an oasis. It promises everything this current path has stopped providing: excitement, novelty, hope. So you walk toward it. You reset. You start over. And the moment you get there, it disappears, because it was never real. It was just your brain hunting for dopamine.</p>
+<p data-para="391" data-cs="week-5-productivity-and-environment" data-cp="31">The Mirage is the most dangerous pattern in the ADHD brain. Not because the new idea is bad. Sometimes it is genuinely good. But the timing is always suspicious. It always shows up at the exact moment when your current path demands persistence instead of excitement. And if you chase it, you never push through to the compound gains waiting on the other side of the desert. Because they are there. Every single time.</p>
+<p data-para="392" data-cs="week-5-productivity-and-environment" data-cp="32">The question to ask yourself when a new idea appears and everything in your body is screaming to chase it: is this a real oasis, or is it a Mirage? Am I quitting because this path is wrong, or because it stopped being new? If the answer is honest, you will know. And most of the time, the real water is ahead, on the road you are already on.</p>
+<blockquote data-para="393" data-cs="week-5-productivity-and-environment" data-cp="33"><p>Stay on the path. The Mirage will keep appearing. It always does. The people who build something real are not the ones with better ideas. They are the ones who stopped chasing shiny ones.</p><cite>— Jim Ebbelaar</cite></blockquote>
+<h3 data-para="394" data-cs="week-5-productivity-and-environment" data-cp="34">Think Agile, Not Waterfall</h3>
+<p data-para="395" data-cs="week-5-productivity-and-environment" data-cp="35">Instead of planning everything perfectly before you start, work in quick cycles: plan, design, build, test, release, and get feedback as fast as possible. Then use that feedback to improve and do another sprint. Commit to the eighty-percent version. Ship imperfect work quickly, because shipping teaches you things that planning never will.</p>
+<figure class="section-image"><img src="images/week5_sections/w5_section_1_the_harmony_productivity_system.png" alt="The Harmony Productivity System" loading="lazy"></figure>
+<div class="section" id="the-perfect-week-60">
+<h2 data-para="396" data-cs="week-5-productivity-and-environment" data-cp="36">The Perfect Week</h2>
+<p data-para="397" data-cs="week-5-productivity-and-environment" data-cp="37">Intention, not obligation.</p>
+<p data-para="398" data-cs="week-5-productivity-and-environment" data-cp="38">I do not have a highly advanced task management system. I tried for years. Every abandoned system became evidence that I could not follow through. What finally changed everything was giving up on the idea that I needed to fit into someone else&#x27;s system.</p>
+<p data-para="399" data-cs="week-5-productivity-and-environment" data-cp="39">Open your calendar and create a new layer called My Perfect Week. Based on your energy patterns, your self-knowledge, and what you have learned about yourself over the past weeks, fill in blocks as intentions. Start with your morning routine. Then protect your highest-energy hours for deep work, whatever time that is for you. Batch meetings and communication into a separate window so they do not bleed into your focus time. Block your lunch break so you do not forget to eat during a hyperfocus session. And be honest about when your energy dips, because that is when you schedule the lighter work, not the tasks that need your best thinking.</p>
+<blockquote data-para="400" data-cs="week-5-productivity-and-environment" data-cp="40"><p>I set the intention with my calendar. It does not mean I force myself to live by it perfectly. But having the intention there changes everything. It gives me structure without rigidity.</p><cite>— Jim Ebbelaar</cite></blockquote>
+<p data-para="401" data-cs="week-5-productivity-and-environment" data-cp="41">Most days, I do not follow my plan perfectly. I arrange tasks with good intentions, but then afternoon comes and I do not feel like doing what I planned, so I drag the task to tomorrow. The morning routine is my one non-negotiable. Everything else is intention, not obligation.</p>
+<figure class="section-image"><img src="images/week5_sections/w5_section_2_the_perfect_week.png" alt="The Perfect Week" loading="lazy"></figure>
+<div class="section" id="environment-as-architecture-61">
+<h2 data-para="402" data-cs="week-5-productivity-and-environment" data-cp="42">Environment as Architecture</h2>
+<blockquote data-para="403" data-cs="week-5-productivity-and-environment" data-cp="43"><p>Environment is the invisible hand that shapes human behavior. Your personal characteristics tend to get overpowered by your environment.</p><cite>— James Clear</cite></blockquote>
+<p data-para="404" data-cs="week-5-productivity-and-environment" data-cp="44">For the ADHD brain, this matters even more. We are more sensitive to environmental cues. A notification that someone else can ignore completely derails our train of thought. The principle is simple: make the right choice the path of least resistance.</p>
+<h3 data-para="405" data-cs="week-5-productivity-and-environment" data-cp="45">Self-Binding</h3>
+<p data-para="406" data-cs="week-5-productivity-and-environment" data-cp="46">Dr. Anna Lembke describes self-binding as deliberately creating barriers between yourself and compulsive behaviors. Put your phone in another room during focused work. Use website blockers. Delete social media apps. Do not keep bad food in your house. I do not trust my future self to make good decisions when he is tired, stressed, or bored. So I make those decisions now, when I am thinking clearly.</p>
+<h3 data-para="407" data-cs="week-5-productivity-and-environment" data-cp="47">The One-Thing Question</h3>
+<p data-para="408" data-cs="week-5-productivity-and-environment" data-cp="48">Overwhelm is the primary driver of procrastination. The solution is a single question, asked every morning, that forces ruthless clarity:</p>
+<blockquote data-para="409" data-cs="week-5-productivity-and-environment" data-cp="49"><p>What is the one thing I can do today that makes everything else easier or unnecessary?</p><cite>— Gary Keller</cite></blockquote>
+<p data-para="410" data-cs="week-5-productivity-and-environment" data-cp="50">Write down the answer. Do that one thing before anything else. This practice alone can transform your productivity more than any app or system ever will.</p>
+<h3 data-para="411" data-cs="week-5-productivity-and-environment" data-cp="51">Build With Your Brain</h3>
+<p data-para="412" data-cs="week-5-productivity-and-environment" data-cp="52">Stop trying to fix your weaknesses and start building around them. When I quit Ritalin, I did not try to develop the skills the medication had given me. I outsourced everything I was not good at. What I kept was what I was uniquely good at: vision, strategy, presentation, transformation. And today, with AI, the possibilities for building around your weaknesses are exploding.</p>
+<h3 data-para="413" data-cs="week-5-productivity-and-environment" data-cp="53">Reducing Importance</h3>
+<p data-para="414" data-cs="week-5-productivity-and-environment" data-cp="54">One of the most counterintuitive insights for productivity: the more you overcharge a goal with pressure, identity, or desperation, the more inner tension and resistance you create. Pursuing goals with focused action but without clenched desperation creates an entirely different energy. Hold your desires lightly. The paradox of productivity is that often, the less tightly you grip, the more you accomplish.</p>
+<h3 data-para="415" data-cs="week-5-productivity-and-environment" data-cp="55">The Magic of Thinking Big</h3>
+<p data-para="416" data-cs="week-5-productivity-and-environment" data-cp="56">David Schwartz identified a truth that ties the entire system together: the size of your thinking determines the size of your results. Small thinking produces small actions, which produce small results. Big thinking opens neural pathways to creative solutions that remain invisible to the person who has already decided they cannot.</p>
+<blockquote data-para="417" data-cs="week-5-productivity-and-environment" data-cp="57"><p>The biggest limit on what you can achieve is not your brain chemistry or your diagnosis. It is the size of your belief about what is possible.</p><cite>— Jim Ebbelaar</cite></blockquote>
+<p data-para="418" data-cs="week-5-productivity-and-environment" data-cp="58">Share your answer to the One-Thing Question in the community. What is the one thing you can do today that makes everything else easier or unnecessary? Post it, do it, then come back and post the result. This creates a public commitment loop that the ADHD brain actually responds to. The dopamine hit of posting a completed action is real. Use it.</p>
+<div class="community-action">
+<div class="community-action-label">Community Action</div>
+<div class="community-template-box" data-template="The one thing I can do today that makes everything else easier or unnecessary: [your answer]. Result: [come back and post what happened].">
+<p>The one thing I can do today that makes everything else easier or unnecessary: <span class="bracket">[your answer]</span>. Result: <span class="bracket">[come back and post what happened]</span>.</p>
+<div class="copy-post-bar">
+<button class="btn-copy" onclick="copyTemplate(this)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg> Copy template</button>
+<a class="btn-post" href="https://www.skool.com/adhd?c=c065df53224b4a1691cdf5640ece9a6e" target="_blank" rel="noopener" onclick="copyTemplate(this.previousElementSibling)">Post in community →</a>
+</div>
+</div>
+</div>
+<figure class="section-image"><img src="images/week5_sections/w5_section_3_environment_as_architecture.png" alt="Environment as Architecture" loading="lazy"></figure>
+<section class="chapter week-chapter" id="week-6-integration-and-the-long-game">
+<figure class="section-image"><img src="images/weeks/week_6.png" alt="Week 6: Integration and The Long Game" loading="lazy"></figure>
+<h1 data-para="419">Week 6: Integration and The Long Game</h1>
+<div class="ornament"></div>
+<p data-para="420" data-cs="week-6-integration-and-the-long-game" data-cp="0">Make it who you are, not something you did once.</p>
+<p data-para="421" data-cs="week-6-integration-and-the-long-game" data-cp="1">Six weeks ago, you started this program. Maybe you were skeptical. Maybe you were hopeful. Maybe you were desperate. Whatever brought you here, you are still here. In a world that is engineered to scatter your attention, in a brain that is wired to chase the next shiny thing, you showed up week after week. This final week is not about adding more. It is about making sure what you have built actually lasts.</p>
+<div class="section" id="consistency-over-perfection-62">
+<h2 data-para="422" data-cs="week-6-integration-and-the-long-game" data-cp="2">Consistency Over Perfection</h2>
+<p data-para="423" data-cs="week-6-integration-and-the-long-game" data-cp="3">The most resilient framework for sustainable change is breathtakingly simple: never miss two days in a row. One missed day is an error. Two missed days is the start of a new habit. This framework demolishes perfectionism by planning for failure in advance. It makes the bounce-back the focus rather than the unbroken streak.</p>
+<p data-para="424" data-cs="week-6-integration-and-the-long-game" data-cp="4">Your morning routine does not have to be perfect every day. Your check-ins do not have to happen at the same time. Your nutrition does not have to be flawless. What matters is the pattern over time. Miss a day? Fine. Come back tomorrow. That is the skill. That is the only skill that matters. Not perfection. Return.</p>
+<blockquote data-para="425" data-cs="week-6-integration-and-the-long-game" data-cp="5"><p>Problems are a feature of life, not a bug. There will never be a time when they are all gone.</p><cite>— Chris Williamson</cite></blockquote>
+<figure class="section-image"><img src="images/week6_sections/w6_section_1_consistency_over_perfection.png" alt="Consistency Over Perfection" loading="lazy"></figure>
+<div class="section" id="evidence-over-belief-63">
+<h2 data-para="426" data-cs="week-6-integration-and-the-long-game" data-cp="6">Evidence Over Belief</h2>
+<p data-para="427" data-cs="week-6-integration-and-the-long-game" data-cp="7">If the sabotage pattern we explored in Week 4 comes from an old identity, the solution is building a new one. But how do you make a new identity stick? Belief without evidence is just hope. And hope, while comforting, does not rewire neural pathways. This is why affirmations alone so often fail. You can stand in front of a mirror and say I am confident a thousand times, but if you never take an action that a confident person would take, your brain knows you are lying.</p>
+<p data-para="428" data-cs="week-6-integration-and-the-long-game" data-cp="8">The ADHD brain is particularly vulnerable here because it has accumulated so much negative evidence over a lifetime. You cannot out-affirm that belief system. You can only out-evidence it.</p>
+<h3 data-para="429" data-cs="week-6-integration-and-the-long-game" data-cp="9">The Evidence Stack</h3>
+<p data-para="430" data-cs="week-6-integration-and-the-long-game" data-cp="10">Over the past five weeks, you have been building this stack whether you realized it or not. Every check-in you completed is a piece of evidence. Every morning routine you showed up for. Every time you named an emotion instead of being consumed by it. Every workout you did when you did not feel like it. Every time you fell and got back up.</p>
+<blockquote data-para="431" data-cs="week-6-integration-and-the-long-game" data-cp="11"><p>Every action you take is a vote for the type of person you wish to become. No single instance will transform your identity, but as the votes build up, so does the evidence of your new identity.</p><cite>— James Clear</cite></blockquote>
+<p data-para="432" data-cs="week-6-integration-and-the-long-game" data-cp="12">I checked in four times this week. That is evidence I am someone who shows up. Two workouts this week. That is proof I am consistent. Showed up for week six of a program my ADHD brain was supposed to abandon at week two. That is evidence I follow through. The actions did not create the identity. They confirmed it.</p>
+<figure class="section-image"><img src="images/week6_sections/w6_section_2_evidence_over_belief.png" alt="Evidence Over Belief" loading="lazy"></figure>
+<div class="section" id="the-plateau-of-latent-potential-64">
+<h2 data-para="433" data-cs="week-6-integration-and-the-long-game" data-cp="13">The Plateau of Latent Potential</h2>
+<p data-para="434" data-cs="week-6-integration-and-the-long-game" data-cp="14">As you build your evidence stack, you will encounter a frustrating reality: results do not always match effort. James Clear describes this as the Plateau of Latent Potential.</p>
+<p data-para="435" data-cs="week-6-integration-and-the-long-game" data-cp="15">Think of an ice cube in a room that is slowly warming. At twenty-six degrees, nothing happens. Twenty-seven, twenty-eight, twenty-nine, thirty, thirty-one. Nothing visible. Then at thirty-two degrees, the ice begins to melt. The breakthrough did not happen at thirty-two. It happened through all the degrees that preceded it. Every degree mattered, even the ones that produced no visible change.</p>
+<blockquote data-para="436" data-cs="week-6-integration-and-the-long-game" data-cp="16"><p>Your work is not wasted. It is being stored. All the action happens below the surface. If you are frustrated with the lack of visible progress, remember that all the energy is being saved for the breakthrough.</p><cite>— James Clear</cite></blockquote>
+<figure class="section-image"><img src="images/week6_sections/w6_section_3_the_plateau_of_latent_potential.png" alt="The Plateau of Latent Potential" loading="lazy"></figure>
+<div class="section" id="domino-thinking-65">
+<h2 data-para="437" data-cs="week-6-integration-and-the-long-game" data-cp="17">Domino Thinking</h2>
+<p data-para="438" data-cs="week-6-integration-and-the-long-game" data-cp="18">The compound effect works in your favor when you are making good choices. But it works against you just as powerfully when you are not. A single choice can set off a cascade that impacts you for days. One glass of wine leads to worse sleep, which leads to sugar cravings, which leads to a skipped workout, which leads to lower mood, which leads to scrolling, which leads to guilt. One decision. Multi-day impact.</p>
+<p data-para="439" data-cs="week-6-integration-and-the-long-game" data-cp="19">But the reverse is equally true. One good night of sleep leads to a clearer morning, a strong workout, better food choices, sustained energy, deep work, and a sense of accomplishment. One good decision can launch a positive cascade that carries you for days. The question is not just do I want this now. It is what does this choice cost me tomorrow.</p>
+<figure class="section-image"><img src="images/week6_sections/w6_section_4_domino_thinking.png" alt="Domino Thinking" loading="lazy"></figure>
+<div class="section" id="playing-long-term-games-66">
+<h2 data-para="440" data-cs="week-6-integration-and-the-long-game" data-cp="20">Playing Long-Term Games</h2>
+<blockquote data-para="441" data-cs="week-6-integration-and-the-long-game" data-cp="21"><p>Life is a series of games. The mistake is playing short-term games with people who are playing long-term games. Find the long-term players. Become one yourself.</p><cite>— Naval Ravikant</cite></blockquote>
+<p data-para="442" data-cs="week-6-integration-and-the-long-game" data-cp="22">In many ways, this entire program has been an exercise in learning to play a cooperative game with yourself. Getting all the different parts of your brain, the energetic, the emotional, the executive, to work together for a bigger prize instead of fighting each other. The decisions you make from a place of self-trust are fundamentally different from the decisions you make from self-doubt.</p>
+<figure class="section-image"><img src="images/week6_sections/w6_section_5_playing_long-term_games.png" alt="Playing Long-Term Games" loading="lazy"></figure>
+<div class="section" id="the-decision-filter-67">
+<h2 data-para="443" data-cs="week-6-integration-and-the-long-game" data-cp="23">The Decision Filter</h2>
+<p data-para="444" data-cs="week-6-integration-and-the-long-game" data-cp="24">Protecting your focus when opportunities arrive.</p>
+<p data-para="445" data-cs="week-6-integration-and-the-long-game" data-cp="25">Alignment Check: Does this opportunity move me closer to one of my Big Rocks?</p>
+<p data-para="446" data-cs="week-6-integration-and-the-long-game" data-cp="26">Energy Check: Will this give me energy or drain it? Does it fit my right difficult?</p>
+<p data-para="447" data-cs="week-6-integration-and-the-long-game" data-cp="27">Anti-Goal Check: Does this push me toward any of the outcomes I decided to run from?</p>
+<p data-para="448" data-cs="week-6-integration-and-the-long-game" data-cp="28">Capacity Check: Do I actually have the time and energy for this right now, or am I in wishful thinking mode?</p>
+<p data-para="449" data-cs="week-6-integration-and-the-long-game" data-cp="29">Run every new opportunity through these four filters. If it does not pass all of them, the answer is no, regardless of how exciting it feels in the moment. Your future self will thank you for the things you declined even more than the things you accepted.</p>
+<figure class="section-image"><img src="images/week6_sections/w6_section_6_the_decision_filter.png" alt="The Decision Filter" loading="lazy"></figure>
+<div class="section" id="the-comeback-protocol-68">
+<h2 data-para="450" data-cs="week-6-integration-and-the-long-game" data-cp="30">The Comeback Protocol</h2>
+<p data-para="451" data-cs="week-6-integration-and-the-long-game" data-cp="31">Your emergency plan for when it all falls apart.</p>
+<p data-para="452" data-cs="week-6-integration-and-the-long-game" data-cp="32">Because things will fall apart. This is not pessimism. It is planning. The question has never been if you will stumble. The question is how quickly you will return.</p>
+<p data-para="453" data-cs="week-6-integration-and-the-long-game" data-cp="33">Minimum viable day. When everything falls apart, you do not need your full morning routine. You need five to fifteen minutes of the absolute essentials. A glass of water, a five-minute walk, a single check-in. Define your bare minimum and commit to that on your worst days.</p>
+<p data-para="454" data-cs="week-6-integration-and-the-long-game" data-cp="34">Never miss two days. One miss is an error. Two is a pattern. This is the line in the sand.</p>
+<p data-para="455" data-cs="week-6-integration-and-the-long-game" data-cp="35">Back to domino number one. When everything has unraveled, do not try to fix everything at once. Go back to sleep. Phone out of the bedroom. Dim the lights. Get one good night of rest. That single domino will start the cascade that rebuilds everything else.</p>
+<p data-para="456" data-cs="week-6-integration-and-the-long-game" data-cp="36">Self-compassion. You are not weak for falling. You are not broken for losing your streak. You are human. The voice that says you have ruined it all is the old identity trying to pull you back. Recognize it. Name it. And then do the bare minimum anyway.</p>
+<blockquote data-para="457" data-cs="week-6-integration-and-the-long-game" data-cp="37"><p>I have fallen more times than I can count. The difference between who I was and who I have become is not that I stopped falling. It is that I got faster at getting up. That is the only skill that matters.</p><cite>— Jim Ebbelaar</cite></blockquote>
+<figure class="section-image"><img src="images/week6_sections/w6_section_7_the_comeback_protocol.png" alt="The Comeback Protocol" loading="lazy"></figure>
+<div class="section" id="the-long-view-69">
+<h2 data-para="458" data-cs="week-6-integration-and-the-long-game" data-cp="38">The Long View</h2>
+<p data-para="459" data-cs="week-6-integration-and-the-long-game" data-cp="39">Transformation takes more time than you want. And it is worth every day. The plateau will test you. The Mirage will tempt you. The old patterns will call you back with voices that sound like truth. This is not a sign that you are failing. This is a sign that you are changing.</p>
+<p data-para="460" data-cs="week-6-integration-and-the-long-game" data-cp="40">You will have off days. You will fall short of your ideals. You will discover that the person you want to become is further away than you thought. And then you will realize that the distance is closing faster than you expected, because the compound effect does not care about your doubts. It just keeps accumulating.</p>
+<blockquote data-para="461" data-cs="week-6-integration-and-the-long-game" data-cp="41"><p>Show me someone who has never failed and I will show you someone who has never tried anything meaningful. The masters are not people who never fell. They are people who became experts at getting back up.</p><cite>— Jim Ebbelaar</cite></blockquote>
+<p data-para="462" data-cs="week-6-integration-and-the-long-game" data-cp="42">Write your personal Comeback Protocol and post it in the community. This is your emergency plan for when it all falls apart. When someone else reads it, they might borrow from it. When you read theirs, you might improve yours. Then write a short letter to your future self and share it. Six weeks from now, you will read it and realize how far you have come.</p>
+<figure class="section-image"><img src="images/week6_sections/w6_section_8_the_long_view.png" alt="The Long View" loading="lazy"></figure>
+<section class="chapter" id="your-journey-forward">
+<h1 data-para="463">Your Journey Forward</h1>
+<div class="ornament"></div>
+<p data-para="464" data-cs="your-journey-forward" data-cp="0">The end of this program is the true beginning.</p>
+<p data-para="465" data-cs="your-journey-forward" data-cp="1">You now have something that most people with ADHD never receive: a complete operating system designed for how your brain actually works.</p>
+<p data-para="466" data-cs="your-journey-forward" data-cp="2">You have the philosophy to understand why you operate the way you do and how transformation works from the inside out. You have the neuroscience to work with your ADHD brain rather than against it. You have the tools to regulate your biology and create the energy foundation that makes everything else possible. You have the emotional mastery to shorten the time between stimulus and response. You have the identity frameworks to bridge the gap between who you have been and who you are becoming. You have the productivity systems to channel your intensity without burning out. And you have the integration tools to make it all last.</p>
+<p data-para="467" data-cs="your-journey-forward" data-cp="3">But most importantly, you have the community. The people who showed up alongside you. The ones who understand what it is like to live in your head because they live in theirs too.</p>
+<div class="section" id="the-real-goal-70">
+<h2 data-para="468" data-cs="your-journey-forward" data-cp="4">The Real Goal</h2>
+<blockquote data-para="469" data-cs="your-journey-forward" data-cp="5"><p>When we overcome ourselves, the side effect is true joy.</p><cite>— Dr. Joe Dispenza</cite></blockquote>
+<p data-para="470" data-cs="your-journey-forward" data-cp="6">Nobody is making you happy but you. The career success, the relationships, the health, the financial goals, these are not the goal. They are side effects. The real goal is wholeness. The real prize is becoming someone who does not need external validation because the internal work has been done.</p>
+<p data-para="471" data-cs="your-journey-forward" data-cp="7">I chased external validation for years. Sixty thousand followers. A seven-figure business. None of it filled the hole. The hole was inside, and no amount of external success could fill it. Only the internal work did that. Only the willingness to sit with myself, to face the kid who felt stupid after the CITO test, to let go of the masks I had worn for decades. That is what finally brought peace.</p>
+<p data-para="472" data-cs="your-journey-forward" data-cp="8">That is what I want for you. Not perfection. Not some idealized version of a productive, optimized life. Just peace. Just the quiet confidence that comes from knowing who you are, accepting how your brain works, and building a life that fits.</p>
+<p data-para="473" data-cs="your-journey-forward" data-cp="9">The ADHD brain thrives on connection, accountability, and momentum. The community gives you all three. Each week has a community prompt for a reason. Posting your progress is part of the program, not extra credit. The people who transform are the ones who show up visibly. So show up. Post your wins. Share your struggles. Help someone else when they are stuck. That is how you stay accountable, and that is how this community stays alive.</p>
+<p data-para="474" data-cs="your-journey-forward" data-cp="10">And if you find yourself wanting more, including live coaching, AI-powered tracking, and hot seat sessions where Jim works with your specific situation, the full ADHD Harmony program is always there. No pressure. Just an open door for when you are ready to go deeper.</p>
+<div class="section" id="the-final-word-71">
+<h2 data-para="475" data-cs="your-journey-forward" data-cp="11">The Final Word</h2>
+<p data-para="476" data-cs="your-journey-forward" data-cp="12">Your future self is waiting. You now hold the blueprint to get there.</p>
+<p data-para="477" data-cs="your-journey-forward" data-cp="13">But a blueprint is just paper until someone builds. The philosophy is just ideas until someone embodies them. The program is just structure until someone does the work.</p>
+<p data-para="478" data-cs="your-journey-forward" data-cp="14">That someone is you.</p>
+<p data-para="479" data-cs="your-journey-forward" data-cp="15">Not the perfect version of you. Not the motivated version that shows up on the first day. The real you, the one who wobbles, who misses days, who sometimes forgets everything you have learned here.</p>
+<p data-para="480" data-cs="your-journey-forward" data-cp="16">That version of you is enough. That version of you can transform. That version of you has always had the capacity to become who you were always meant to be.</p>
+<p data-para="481" data-cs="your-journey-forward" data-cp="17">The only question has ever been whether you would do the work.</p>
+<p data-para="482" data-cs="your-journey-forward" data-cp="18">This is not a perfect life plan.</p>
+<p data-para="483" data-cs="your-journey-forward" data-cp="19">This is an ADHD-proof operating system.</p>
+<p data-para="484" data-cs="your-journey-forward" data-cp="20">You will wobble. You will miss days.</p>
+<p data-para="485" data-cs="your-journey-forward" data-cp="21">And you will still build momentum,</p>
+<p data-para="486" data-cs="your-journey-forward" data-cp="22">because you have trained the skill that matters most:</p>
+<p data-para="487" data-cs="your-journey-forward" data-cp="23">Coming Back.</p>
+<p data-para="488" data-cs="your-journey-forward" data-cp="24">Ready for the full guided experience? The ADHD Harmony program gives you everything this blueprint cannot: live weekly coaching with Jim, hot seat sessions where your specific challenges get addressed, Q&amp;A calls, body-doubling sessions, Harmony AI adapting to your unique brain in real time, and a cohort of people who understand exactly what it is like to live in your head. The blueprint gave you the map. The program gives you the guide.</p>
+</section>
+
+    </div>
+
+    <div class="book-footer">
+        <p>© ADHD Harmony &nbsp;|&nbsp; Need help? Get live coaching, hot seat sessions, worksheets and AI tools
+        <a href="https://www.skool.com/adhd" target="_blank" rel="noopener">DM Jim here</a></p>
+    </div>
+</main>
+
+<!-- Resume reading banner -->
+<div id="resume-banner">
+    <span class="resume-text">↑ Continue where you left off</span>
+    <span class="dismiss">(Esc to dismiss)</span>
+</div>
+
+<!-- Reading position indicator -->
+<a id="cta-float" href="https://www.skool.com/adhd" target="_blank" rel="noopener">
+    <span class="cta-text"><strong>Live coaching, AI tools & community.</strong> DM Jim</span>
+    <span class="cta-btn">skool.com/adhd</span>
+</a>
+
+<script>
+(function() {
+    'use strict';
+
+    // ═══════════════════════════════
+    // Anti-copy
+    // ═══════════════════════════════
+    document.addEventListener('copy', e => e.preventDefault());
+    document.addEventListener('cut', e => e.preventDefault());
+    document.addEventListener('contextmenu', e => e.preventDefault());
+
+    // ═══════════════════════════════
+    // TOC toggle (mobile)
+    // ═══════════════════════════════
+    const toc = document.getElementById('toc');
+    const tocToggle = document.getElementById('toc-toggle');
+    tocToggle.addEventListener('click', () => {
+        toc.classList.toggle('open');
+    });
+    // Close TOC when clicking a link (mobile)
+    toc.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+            if (window.innerWidth <= 900) toc.classList.remove('open');
+        });
+    });
+
+    // ═══════════════════════════════
+    // Active TOC tracking
+    // ═══════════════════════════════
+    const tocLinks = Array.from(toc.querySelectorAll('a'));
+    const sections = [];
+    tocLinks.forEach(link => {
+        const id = link.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if (el) sections.push({ el, link });
+    });
+
+    function updateActiveToc() {
+        const scrollY = window.scrollY + 150;
+        let current = sections[0];
+        for (const s of sections) {
+            if (s.el.offsetTop <= scrollY) current = s;
+        }
+        tocLinks.forEach(l => l.classList.remove('active'));
+        if (current) {
+            current.link.classList.add('active');
+            // Scroll TOC to keep active item visible
+            const tocRect = toc.getBoundingClientRect();
+            const linkRect = current.link.getBoundingClientRect();
+            if (linkRect.top < tocRect.top + 60 || linkRect.bottom > tocRect.bottom - 20) {
+                current.link.scrollIntoView({ block: 'center', behavior: 'smooth' });
+            }
+        }
+    }
+
+    // ═══════════════════════════════
+    // Progress bar
+    // ═══════════════════════════════
+    const progressBar = document.getElementById('progress-bar');
+
+    function updateProgress() {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        progressBar.style.width = pct + '%';
+    }
+
+    // ═══════════════════════════════
+    // Reading position (localStorage)
+    // ═══════════════════════════════
+    const STORAGE_KEY = 'adhd-harmony-reading-pos';
+    const ctaFloat = document.getElementById('cta-float');
+    let saveTimeout;
+
+    function savePosition() {
+        const scrollY = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight;
+        // Find nearest section
+        let nearestId = '';
+        let nearestTitle = '';
+        for (const s of sections) {
+            if (s.el.offsetTop <= scrollY + 200) {
+                nearestId = s.el.id;
+                nearestTitle = s.link.textContent;
+            }
+        }
+        localStorage.setItem(STORAGE_KEY, JSON.stringify({
+            scrollY,
+            scrollPct: docHeight > 0 ? scrollY / docHeight : 0,
+            sectionId: nearestId,
+            sectionTitle: nearestTitle,
+            timestamp: Date.now()
+        }));
+    }
+
+    function debounceSave() {
+        clearTimeout(saveTimeout);
+        saveTimeout = setTimeout(savePosition, 500);
+    }
+
+    // Show CTA after scrolling past the cover
+    function updatePositionLabel() {
+        if (window.scrollY > window.innerHeight * 0.5) {
+            ctaFloat.classList.add('visible');
+        } else {
+            ctaFloat.classList.remove('visible');
+        }
+    }
+
+    // ═══════════════════════════════
+    // Resume reading
+    // ═══════════════════════════════
+    const resumeBanner = document.getElementById('resume-banner');
+
+    function checkResume() {
+        try {
+            const saved = JSON.parse(localStorage.getItem(STORAGE_KEY));
+            if (!saved || !saved.sectionId) return;
+            // Only show if they were past the cover
+            if (saved.scrollPct < 0.02) return;
+
+            resumeBanner.querySelector('.resume-text').textContent =
+                '↑ Continue reading: ' + saved.sectionTitle;
+            resumeBanner.style.display = 'flex';
+
+            resumeBanner.addEventListener('click', () => {
+                const el = document.getElementById(saved.sectionId);
+                if (el) {
+                    el.scrollIntoView({ behavior: 'smooth' });
+                }
+                resumeBanner.style.display = 'none';
+            });
+
+            // Auto-dismiss after 8s
+            setTimeout(() => {
+                resumeBanner.style.display = 'none';
+            }, 8000);
+        } catch(e) {}
+    }
+
+    // Dismiss with Escape
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') {
+            resumeBanner.style.display = 'none';
+            if (window.innerWidth <= 900) toc.classList.remove('open');
+        }
+    });
+
+    // ═══════════════════════════════
+    // Keyboard navigation
+    // ═══════════════════════════════
+    document.addEventListener('keydown', e => {
+        // Don't interfere with inputs
+        if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+
+        const scrollAmt = window.innerHeight * 0.85;
+
+        switch(e.key) {
+            case 'ArrowDown':
+            case 'j':
+                e.preventDefault();
+                window.scrollBy({ top: 80, behavior: 'smooth' });
+                break;
+            case 'ArrowUp':
+            case 'k':
+                e.preventDefault();
+                window.scrollBy({ top: -80, behavior: 'smooth' });
+                break;
+            case ' ':
+                if (!e.shiftKey) {
+                    e.preventDefault();
+                    window.scrollBy({ top: scrollAmt, behavior: 'smooth' });
+                } else {
+                    e.preventDefault();
+                    window.scrollBy({ top: -scrollAmt, behavior: 'smooth' });
+                }
+                break;
+            case 'ArrowRight':
+            case 'n':
+                // Next section
+                e.preventDefault();
+                navigateSection(1);
+                break;
+            case 'ArrowLeft':
+            case 'p':
+                // Previous section
+                e.preventDefault();
+                navigateSection(-1);
+                break;
+            case 't':
+                // Toggle TOC
+                toc.classList.toggle('open');
+                break;
+            case 'Home':
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                break;
+            case 'End':
+                e.preventDefault();
+                window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' });
+                break;
+        }
+    });
+
+    function navigateSection(direction) {
+        const scrollY = window.scrollY + 150;
+        let currentIdx = 0;
+        for (let i = 0; i < sections.length; i++) {
+            if (sections[i].el.offsetTop <= scrollY) currentIdx = i;
+        }
+        const nextIdx = Math.max(0, Math.min(sections.length - 1, currentIdx + direction));
+        sections[nextIdx].el.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // ═══════════════════════════════
+    // Scroll handler (debounced)
+    // ═══════════════════════════════
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            requestAnimationFrame(() => {
+                updateActiveToc();
+                updateProgress();
+                updatePositionLabel();
+                debounceSave();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    });
+
+    // ═══════════════════════════════
+    // Audio players (disabled by feature flag)
+    // ═══════════════════════════════
+    const AUDIO_ENABLED = false; // Set to true to re-enable audio
+    const SPEEDS = [1, 1.25, 1.5, 1.75, 2, 0.75];
+    let currentAudio = null;
+    let currentPlayer = null;
+    let currentTimings = null;  // paragraph timing data for active player
+    let currentChapterSlug = null;
+    let highlightedEl = null;
+
+    function clearHighlight() {
+        if (highlightedEl) {
+            highlightedEl.classList.remove('audio-active');
+            highlightedEl = null;
+        }
+    }
+
+    function highlightParagraph(chapterSlug, timings, currentTime) {
+        if (!timings || !chapterSlug) return;
+
+        // Find which paragraph we're in
+        let activePara = null;
+        for (const t of timings) {
+            if (currentTime >= t.start && currentTime <= t.end + 0.5) {
+                activePara = t;
+            }
+        }
+
+        if (!activePara) {
+            clearHighlight();
+            return;
+        }
+
+        // Find the DOM element: match data-cs (chapter slug) + data-cp (para index)
+        const el = document.querySelector(
+            `[data-cs="${chapterSlug}"][data-cp="${activePara.index}"]`
+        );
+
+        if (el && el !== highlightedEl) {
+            clearHighlight();
+            el.classList.add('audio-active');
+            highlightedEl = el;
+
+            // Scroll into view if needed (keep it smooth, don't jump aggressively)
+            const rect = el.getBoundingClientRect();
+            const windowH = window.innerHeight;
+            if (rect.top < 80 || rect.bottom > windowH - 80) {
+                el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
+    }
+
+    function formatTime(s) {
+        const m = Math.floor(s / 60);
+        const sec = Math.floor(s % 60);
+        return m + ':' + (sec < 10 ? '0' : '') + sec;
+    }
+
+    if (!AUDIO_ENABLED) { /* audio disabled */ } else document.querySelectorAll('.audio-player').forEach(player => {
+        const src = player.dataset.src;
+        const playBtn = player.querySelector('.play-btn');
+        const progressBar = player.querySelector('.audio-progress-bar');
+        const progressFill = player.querySelector('.audio-progress-fill');
+        const timeDisplay = player.querySelector('.audio-time');
+        const speedBtn = player.querySelector('.speed-btn');
+        let audio = null;
+        let speedIdx = 0;
+        let timings = null;
+        let chapterSlug = null;
+
+        // Derive the chapter slug and JSON path from the audio src
+        // src = "audio/before_you_begin.mp3" → json = "audio/before_you_begin.json"
+        const jsonSrc = src.replace('.mp3', '.json');
+
+        // Find the chapter slug — the player sits inside a section.chapter
+        const chapterEl = player.closest('.chapter');
+        if (chapterEl) {
+            chapterSlug = chapterEl.id;
+        }
+
+        // Load timing data
+        fetch(jsonSrc)
+            .then(r => r.ok ? r.json() : null)
+            .then(data => {
+                if (data && data.paragraphs) {
+                    timings = data.paragraphs;
+                }
+            })
+            .catch(() => {});  // No timing data available — that's fine
+
+        function initAudio() {
+            if (audio) return audio;
+            audio = new Audio(src);
+            audio.preload = 'metadata';
+
+            audio.addEventListener('loadedmetadata', () => {
+                timeDisplay.textContent = '0:00 / ' + formatTime(audio.duration);
+            });
+
+            audio.addEventListener('timeupdate', () => {
+                if (audio.duration) {
+                    const pct = (audio.currentTime / audio.duration) * 100;
+                    progressFill.style.width = pct + '%';
+                    timeDisplay.textContent = formatTime(audio.currentTime) + ' / ' + formatTime(audio.duration);
+
+                    // Highlight current paragraph
+                    highlightParagraph(chapterSlug, timings, audio.currentTime);
+                }
+            });
+
+            audio.addEventListener('ended', () => {
+                player.classList.remove('playing');
+                progressFill.style.width = '0%';
+                currentAudio = null;
+                currentPlayer = null;
+                currentTimings = null;
+                currentChapterSlug = null;
+                clearHighlight();
+            });
+
+            return audio;
+        }
+
+        playBtn.addEventListener('click', () => {
+            const a = initAudio();
+
+            // Stop other players
+            if (currentAudio && currentAudio !== a) {
+                currentAudio.pause();
+                currentPlayer.classList.remove('playing');
+                clearHighlight();
+            }
+
+            if (a.paused) {
+                a.play();
+                player.classList.add('playing');
+                currentAudio = a;
+                currentPlayer = player;
+                currentTimings = timings;
+                currentChapterSlug = chapterSlug;
+            } else {
+                a.pause();
+                player.classList.remove('playing');
+                currentAudio = null;
+                currentPlayer = null;
+                currentTimings = null;
+                currentChapterSlug = null;
+                clearHighlight();
+            }
+        });
+
+        progressBar.addEventListener('click', (e) => {
+            const a = initAudio();
+            const rect = progressBar.getBoundingClientRect();
+            const pct = (e.clientX - rect.left) / rect.width;
+            if (a.duration) {
+                a.currentTime = pct * a.duration;
+            }
+        });
+
+        speedBtn.addEventListener('click', () => {
+            const a = initAudio();
+            speedIdx = (speedIdx + 1) % SPEEDS.length;
+            a.playbackRate = SPEEDS[speedIdx];
+            speedBtn.textContent = SPEEDS[speedIdx] + '×';
+        });
+    });
+
+    // Keyboard shortcuts for audio (only when enabled)
+    if (AUDIO_ENABLED) {
+        document.addEventListener('keydown', e => {
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+            if (e.key === 'm' && currentAudio) {
+                currentAudio.muted = !currentAudio.muted;
+            }
+        });
+    }
+
+    // ═══════════════════════════════
+    // Init
+    // ═══════════════════════════════
+    updateActiveToc();
+    updateProgress();
+    checkResume();
+})();
+</script>
+</body>
+</html>
